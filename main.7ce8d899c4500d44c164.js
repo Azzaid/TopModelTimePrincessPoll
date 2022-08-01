@@ -5438,7 +5438,7 @@ var Login = function Login(props) {
     return store.user;
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (user.idKey) {
+    if (user.userId) {
       fetch_jsonp__WEBPACK_IMPORTED_MODULE_1___default()("https://api.vk.com/method/users.get?user_ids=".concat(user.userId, "&access_token=").concat(user.access_token, "&v=5.131")).then(function (response) {
         return response.json();
       }).then(function (json) {
@@ -50712,4 +50712,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.5104298549bb36fdda63.js.map
+//# sourceMappingURL=main.7ce8d899c4500d44c164.js.map
