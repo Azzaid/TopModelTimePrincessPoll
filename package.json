@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Telegram bot with Express js, Firebase and React js admin panel.",
   "main": "index.js",
-  "homepage": "https://Azzaid.github.io/unanonimousPoll",
+  "homepage": "https://Azzaid.github.io/unanonimousPoll/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
