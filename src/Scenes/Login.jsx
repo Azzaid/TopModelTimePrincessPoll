@@ -152,7 +152,7 @@ const Login = (props) => {
           </div>
           <div className={"cardBody"}>
             <a className={"button-65"}
-               href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=http://localhost:3000/login&scope=account&response_type=token&v=5.131`}>
+               href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/unanonimousPoll&scope=account&response_type=token&v=5.131`}>
               Login with VK
             </a>
           </div>
