@@ -5470,7 +5470,7 @@ var Login = function Login(props) {
       className: "cardBody"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       className: "button-65",
-      href: "https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=http://localhost:3000/login&scope=account&response_type=token&v=5.131"
+      href: "https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/unanonimousPoll&scope=account&response_type=token&v=5.131"
     }, "Login with VK")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: 'cardFooter'
     })));
@@ -50709,4 +50709,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.5f351b516867ce9e5ae5.js.map
+//# sourceMappingURL=main.fa03a3b4de756137bc7f.js.map
