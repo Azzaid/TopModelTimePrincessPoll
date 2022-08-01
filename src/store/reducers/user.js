@@ -14,7 +14,8 @@ const initialState = {
 const userReducer = createReducer (initialState, (builder => {
   builder
       .addCase(userIdKeyReceived, (state, action) => {
-        state.idKey = action.payload;
+        state.userId = action.payload.user_id;
+        state.access_token = action.payload.access_token;
       })
   .addCase(userLoggedIn, (state, action) => {
     state.userName = `${action.payload.first_name} ${action.payload.last_name}`;

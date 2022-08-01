@@ -118,7 +118,7 @@ const Login = (props) => {
 
   useEffect(() => {
     if (user.idKey) {
-      fetchJsonp(`https://api.vk.com/method/users.get?user_ids=${hashParams.user_id}&access_token=${hashParams.access_token}&v=5.131`)
+      fetchJsonp(`https://api.vk.com/method/users.get?user_ids=${user.userId}&access_token=${user.access_token}&v=5.131`)
           .then(function(response) {
             return response.json()
           }).then(function(json) {
@@ -152,7 +152,7 @@ const Login = (props) => {
           </div>
           <div className={"cardBody"}>
             <a className={"button-65"}
-               href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/unanonimousPoll&scope=account&response_type=token&v=5.131`}>
+               href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=http://localhost:3000/unanonimousPoll&scope=account&response_type=token&v=5.131`}>
               Login with VK
             </a>
           </div>
