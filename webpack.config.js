@@ -15,7 +15,7 @@ module.exports = {
   devServer: {
     port: 3000,
     hot: true,
-    historyApiFallback: {index: '/'},
+    historyApiFallback: {index: '/unanonimousPoll'},
     open: true,
   },
   plugins: [
