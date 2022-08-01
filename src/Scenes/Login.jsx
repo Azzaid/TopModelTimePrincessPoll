@@ -4,7 +4,7 @@ import fetchJsonp from "fetch-jsonp"
 
 import serverAPI from "api/instance";
 
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {userLoggedIn} from "store/actions/user";
 import {useLocation, useParams, useSearchParams} from "react-router-dom";
 
@@ -114,32 +114,10 @@ const Login = (props) => {
   const dispatch = useDispatch();
   const [error, setError] = useState("")
   const [searchParams ,setSearchParams] = useSearchParams();
-  let location = useLocation();
-
-  const getNormalURLSearchParams = (URLSearchParamsObject) => {
-    const normalizedObject = {};
-    for (const [key, value] of URLSearchParamsObject.entries()) {
-      console.log("search params entry", key, value);
-      normalizedObject[key] = value;
-    }
-    return normalizedObject
-  }
-
-  const parseURLHashParams = (URLHashString) => {
-    const normalizedObject = {};
-    const hasArray = URLHashString.replace("#", "").split("&");
-    hasArray.forEach(hashPart => {
-      const [key, value] = hashPart.split("=");
-
-      console.log("search params entry", key, value);
-      normalizedObject[key] = value;
-    })
-    return normalizedObject
-  }
+  const user = useSelector(store => store.user);
 
   useEffect(() => {
-    const hashParams = parseURLHashParams(location.hash);
-    if (hashParams.user_id) {
+    if (user.idKey) {
       fetchJsonp(`https://api.vk.com/method/users.get?user_ids=${hashParams.user_id}&access_token=${hashParams.access_token}&v=5.131`)
           .then(function(response) {
             return response.json()
@@ -159,13 +137,11 @@ const Login = (props) => {
         console.log('parsing failed', ex)
       })
     }
-  }, [])
+  }, [user])
 
   const toggleCardMode = () => {
     setIsLogin(!isLogin);
   }
-
-  console.log("some params", getNormalURLSearchParams(searchParams), parseURLHashParams(location.hash));
 
   const getLoginCard = () => {
     return (

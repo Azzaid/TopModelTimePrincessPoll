@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 
 import MainLayout from "Layouts/MainLayout/MainLayout";
 import GlobalModalProvider from "HOC/GlobalModalProvider";
@@ -10,13 +10,13 @@ class App extends React.Component {
   render () {
     return (
       <GlobalStoreProvider>
-        <BrowserRouter basename={"/unanonimousPoll"}>
+        <HashRouter>
           <GlobalThemeProvider>
             <GlobalModalProvider>
               <MainLayout/>
             </GlobalModalProvider>
           </GlobalThemeProvider>
-        </BrowserRouter>
+        </HashRouter>
       </GlobalStoreProvider>
     )
   }

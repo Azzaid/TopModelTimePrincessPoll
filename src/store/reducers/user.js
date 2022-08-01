@@ -1,4 +1,4 @@
-import {userLoggedOut, userLoggedIn} from "../actions/user";
+import {userLoggedOut, userLoggedIn, userIdKeyReceived} from "../actions/user";
 import { createReducer } from "@reduxjs/toolkit";
 
 
@@ -13,6 +13,9 @@ const initialState = {
 
 const userReducer = createReducer (initialState, (builder => {
   builder
+      .addCase(userIdKeyReceived, (state, action) => {
+        state.idKey = action.payload;
+      })
   .addCase(userLoggedIn, (state, action) => {
     state.userName = `${action.payload.first_name} ${action.payload.last_name}`;
     state.userId = action.payload.id;
