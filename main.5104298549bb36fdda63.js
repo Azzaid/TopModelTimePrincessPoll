@@ -5249,6 +5249,7 @@ var RootRouter = function RootRouter() {
   });
   var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useLocation)();
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
 
   var renderForNotLoggedInUser = function renderForNotLoggedInUser(component) {
     if (!user.isLoggedIn) {
@@ -5258,20 +5259,6 @@ var RootRouter = function RootRouter() {
         to: "/poll"
       });
     }
-  };
-
-  var parseURLHashParams = function parseURLHashParams(URLHashString) {
-    var normalizedObject = {};
-    var hasArray = URLHashString.replace("#", "").split("&");
-    hasArray.forEach(function (hashPart) {
-      var _hashPart$split = hashPart.split("="),
-          _hashPart$split2 = _slicedToArray(_hashPart$split, 2),
-          key = _hashPart$split2[0],
-          value = _hashPart$split2[1];
-
-      normalizedObject[key] = value;
-    });
-    return normalizedObject;
   };
 
   var renderForLoggedInUser = function renderForLoggedInUser(component) {
@@ -5284,16 +5271,31 @@ var RootRouter = function RootRouter() {
     }
   };
 
-  var getUserStartPage = function getUserStartPage() {
-    var hashParams = parseURLHashParams(location.hash);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var parseURLHashParams = function parseURLHashParams(URLHashString) {
+      var normalizedObject = {};
+      var hasArray = URLHashString.replace("#", "").split("&");
+      hasArray.forEach(function (hashPart) {
+        var _hashPart$split = hashPart.split("="),
+            _hashPart$split2 = _slicedToArray(_hashPart$split, 2),
+            key = _hashPart$split2[0],
+            value = _hashPart$split2[1];
+
+        normalizedObject[key] = value;
+      });
+      return normalizedObject;
+    };
+
+    var hashParams = parseURLHashParams(location.pathname);
+    console.log('some hash params', location, location.pathname, hashParams);
 
     if (hashParams.user_id) {
-      dispatch((0,_store_actions_user__WEBPACK_IMPORTED_MODULE_5__.userIdKeyReceived)(hashParams.user_id));
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Navigate, {
-        to: "/login"
-      });
+      dispatch((0,_store_actions_user__WEBPACK_IMPORTED_MODULE_5__.userIdKeyReceived)(hashParams));
+      navigate("/login");
     }
+  }, [location]);
 
+  var getUserStartPage = function getUserStartPage() {
     if (user.isLoggedIn) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Navigate, {
         to: "/poll"
@@ -5317,8 +5319,8 @@ var RootRouter = function RootRouter() {
   }));
 };
 
-_s2(RootRouter, "qkFKS5qGuyN/7mvTxbQfmhGg+/E=", false, function () {
-  return [react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector, react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useLocation, react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch];
+_s2(RootRouter, "60PBNbSNSjKfOKXerhZikIiz5bI=", false, function () {
+  return [react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector, react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useLocation, react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch, react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate];
 });
 
 _c = RootRouter;
@@ -5437,7 +5439,7 @@ var Login = function Login(props) {
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     if (user.idKey) {
-      fetch_jsonp__WEBPACK_IMPORTED_MODULE_1___default()("https://api.vk.com/method/users.get?user_ids=".concat(hashParams.user_id, "&access_token=").concat(hashParams.access_token, "&v=5.131")).then(function (response) {
+      fetch_jsonp__WEBPACK_IMPORTED_MODULE_1___default()("https://api.vk.com/method/users.get?user_ids=".concat(user.userId, "&access_token=").concat(user.access_token, "&v=5.131")).then(function (response) {
         return response.json();
       }).then(function (json) {
         console.log('parsed json', json);
@@ -6173,7 +6175,8 @@ var initialState = {
 };
 var userReducer = (0,_reduxjs_toolkit__WEBPACK_IMPORTED_MODULE_1__.createReducer)(initialState, function (builder) {
   builder.addCase(_actions_user__WEBPACK_IMPORTED_MODULE_0__.userIdKeyReceived, function (state, action) {
-    state.idKey = action.payload;
+    state.userId = action.payload.user_id;
+    state.access_token = action.payload.access_token;
   }).addCase(_actions_user__WEBPACK_IMPORTED_MODULE_0__.userLoggedIn, function (state, action) {
     state.userName = "".concat(action.payload.first_name, " ").concat(action.payload.last_name);
     state.userId = action.payload.id;
@@ -50709,4 +50712,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.fa03a3b4de756137bc7f.js.map
+//# sourceMappingURL=main.5104298549bb36fdda63.js.map
