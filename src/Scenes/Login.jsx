@@ -117,7 +117,7 @@ const Login = (props) => {
   const user = useSelector(store => store.user);
 
   useEffect(() => {
-    if (user.idKey) {
+    if (user.userId) {
       fetchJsonp(`https://api.vk.com/method/users.get?user_ids=${user.userId}&access_token=${user.access_token}&v=5.131`)
           .then(function(response) {
             return response.json()
