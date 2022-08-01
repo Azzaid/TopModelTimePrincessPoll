@@ -50637,7 +50637,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/unanonimousPoll";
+/******/ 		__webpack_require__.p = "/unanonimousPoll/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/react refresh */
@@ -50712,4 +50712,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.7ce8d899c4500d44c164.js.map
+//# sourceMappingURL=main.6d34ca8dbab4bcbdfc95.js.map
