@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: '[name].[contenthash].js',
     clean: true,
-    publicPath: "/"
+    publicPath: "/unanonimousPoll"
   },
   devtool: "source-map",
   devServer: {
