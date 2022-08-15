@@ -6,6 +6,7 @@ import Login from "Scenes/Login";
 import AdminPanel from "Scenes/Poll";
 import fetchJsonp from "fetch-jsonp";
 import {userIdKeyReceived, userLoggedIn} from "../store/actions/user";
+import SubmittedPage from "../Scenes/SubmittedPage";
 
 const RootRouter = () => {
   const user = useSelector(state => state.user);
@@ -22,8 +23,20 @@ const RootRouter = () => {
   }
 
   const renderForLoggedInUser = (component) => {
-    if (user.isLoggedIn) {
+    if (user.isLoggedIn && !user.formSubmitted) {
       return component
+    } else if (user.formSubmitted) {
+      return <Navigate to={"/submitted"}/>
+    } else {
+      return <Navigate to={"/login"}/>
+    }
+  }
+
+  const renderForSubmittedUser = (component) => {
+    if (user.isLoggedIn && user.formSubmitted) {
+      return component
+    } else if (user.isLoggedIn && !user.formSubmitted) {
+      return <Navigate to={"/poll"}/>
     } else {
       return <Navigate to={"/login"}/>
     }
@@ -46,6 +59,8 @@ const RootRouter = () => {
       dispatch(userIdKeyReceived(hashParams));
       navigate("/login");
     }
+
+    //if (user.formSubmitted) navigate("/submitted");
   }, [location])
 
   const getUserStartPage = () => {
@@ -60,6 +75,7 @@ const RootRouter = () => {
     <Routes>
       <Route path={"/poll"} element={renderForLoggedInUser(<AdminPanel/>)}/>
       <Route path={"/login"} element={renderForNotLoggedInUser(<Login/>)}/>
+      <Route path={"/submitted"} element={renderForSubmittedUser(<SubmittedPage/>)}/>
       <Route path="*" element={getUserStartPage()}/>
     </Routes>
     )

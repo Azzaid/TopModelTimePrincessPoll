@@ -1,4 +1,4 @@
-import {userLoggedOut, userLoggedIn, userIdKeyReceived} from "../actions/user";
+import {userLoggedOut, userLoggedIn, userIdKeyReceived, userFormSubmitted} from "../actions/user";
 import { createReducer } from "@reduxjs/toolkit";
 
 
@@ -29,6 +29,9 @@ const userReducer = createReducer (initialState, (builder => {
     state.userRoles = [];
     state.isLoggedIn = false;
   })
+      .addCase(userFormSubmitted, (state, action) => {
+        state.formSubmitted = action.payload;
+      })
 }));
 
 export default userReducer

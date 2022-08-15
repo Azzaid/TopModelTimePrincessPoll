@@ -1,9 +1,10 @@
 import React, {useRef} from "react";
 import styled from 'styled-components';
 import FacadeForm from "./facadeForm";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import Image1 from "assets/images/Image1.png"
 import axios from "axios";
+import {userFormSubmitted} from "store/actions/user";
 
 const StyledAdminPanelHolder = styled.div`
   max-width: 1200px;
@@ -95,6 +96,7 @@ const StyledAdminPanelHolder = styled.div`
 
 const Poll = (props) => {
     const user = useSelector(store => store.user);
+    const dispatch = useDispatch();
 
   return (
     <StyledAdminPanelHolder>
@@ -120,12 +122,18 @@ const Poll = (props) => {
               formData.append("entry.1997477910", user.userId);
               formData.append("entry.649304355", user.userName);
 
-              axios.post(addressToSubmit, formData).then(({data}) => {
-                  console.log("submitted", data);
-              }).catch((error) => {
-                  console.log('Blend!', error);
+              fetch(addressToSubmit, {
+                  method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                  mode: 'no-cors', // no-cors, *cors, same-origin
+                  redirect: 'follow', // manual, *follow, error
+                  body: formData // body data type must match "Content-Type" header
+              }).then(() => {
+                  console.log("submit then")
+                  dispatch(userFormSubmitted(1));
+              }).catch(() => {
+                  console.log("submit catch")
+                  dispatch(userFormSubmitted(1));
               })
-
 
           }}>
               <fieldset>
