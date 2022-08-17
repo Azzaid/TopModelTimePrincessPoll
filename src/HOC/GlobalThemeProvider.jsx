@@ -22,6 +22,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 `
 
+export const globalPinkStyle = {
+  appBaseFontColor: "white",
+  navbarBackgroundColor: "#ffbfbf",
+  basicBackGroundColor: "#fff2f2",
+  infoCardBackgroundColor: "#fbcdcd",
+  accentBackgroundColor: "#ffbfbf",
+  accentTextColor: "#b38686",
+};
+
 export const globalDarkStyle = {
   appBaseFontColor: "white",
   navbarBackgroundColor: "#212323",
@@ -48,7 +57,7 @@ const GlobalThemeProvider = (props) => {
   }
 
   return (
-      <ThemeProvider theme={isThemeGreen ? globalLightStyle : globalDarkStyle}>
+      <ThemeProvider theme={globalPinkStyle}>
         <ThemeContext.Provider value={toggleTheme}>
           <GlobalStyles/>
           {props.children}

@@ -12,6 +12,45 @@ const StyledAdminPanelHolder = styled.div`
 
   fieldset {
     margin: 10px;
+    border-color: #b386a7;
+    background-color: ${props => props.theme.infoCardBackgroundColor};
+  }
+
+  .formCard{
+    background-color: ${props => props.theme.infoCardBackgroundColor};
+    margin: 20px;
+    border-radius: 5px;
+
+    .cardHeader {
+      width: 100%;
+      height: 50px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      background-color: ${props => props.theme.accentBackgroundColor};
+      font-size: 25px;
+      line-height: 30px;
+      color: ${props => props.theme.accentTextColor};
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    .cardBody {
+      padding: 10px 20px;
+      box-sizing: border-box;
+      color: ${props => props.theme.appBaseFontColor};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 20px;
+      
+      .ansverHolder {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+    }
   }
   
   img {
@@ -63,6 +102,28 @@ const StyledAdminPanelHolder = styled.div`
   vertical-align: top;
   white-space: nowrap;
 }
+
+  button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background: #6dd6d1;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px #57aba7, 0px -10px 25px #a6fffa, inset 0px -5px 10px #57aba7, inset 0px 5px 10px #a6fffa;
+    font-family: 'Damion', cursive;
+    color: white;
+    font-size: 20px;
+    transition: 500ms;
+    border: 2px solid #6dd6d1;
+    animation: hueRotation 2s linear infinite;
+  }
+
+  @keyframes hueRotation {
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
 
   .button-65:hover {
     background-color: #1366d6;
@@ -129,85 +190,103 @@ const Poll = (props) => {
                   body: formData // body data type must match "Content-Type" header
               }).then(() => {
                   console.log("submit then")
-                  dispatch(userFormSubmitted(1));
+                  dispatch(userFormSubmitted(2));
               }).catch(() => {
                   console.log("submit catch")
-                  dispatch(userFormSubmitted(1));
+                  dispatch(userFormSubmitted(2));
               })
 
           }}>
-              <fieldset>
-                  <legend>Жмай</legend>
-
-                  <div>
-                      <input type="radio" id="1_1" name="entry.39161322" value="Я котик"/>
-                          <label htmlFor="1_1">я котик</label>
+              <div className={"formCard"}>
+                  <div className={"cardHeader"}>
+                      Жмай
                   </div>
+                  <div className={"cardBody"}>
+                      <div className={"ansverHolder"}>
+                          <div>
+                              <input type="radio" id="1_1" name="entry.39161322" value="Я котик"/>
+                              <label htmlFor="1_1">я котик</label>
+                          </div>
 
-                  <div>
-                      <input type="radio" id="2_2" name="entry.39161322" value="Тут тоже я котик"/>
-                          <label htmlFor="2_2">Тут тоже я котик</label>
-                  </div>
-              </fieldset>
-
-              <fieldset>
-                  <legend>Сюда тоже жмай</legend>
-              <img src={Image1}/>
-                  <div className={"horizontalRadio"}>
-                      <div>
-                          <input type="radio" id="2_1" name="entry.493417751" value="1"/>
-                          <label htmlFor="2_1">1</label>
-                      </div>
-                      <div>
-                          <input type="radio" id="2_2" name="entry.493417751" value="2"/>
-                          <label htmlFor="2_2">2</label>
-                      </div>
-                      <div>
-                          <input type="radio" id="2_3" name="entry.493417751" value="3"/>
-                          <label htmlFor="2_3">3</label>
-                      </div>
-                      <div>
-                          <input type="radio" id="2_4" name="entry.493417751" value="4"/>
-                          <label htmlFor="2_4">4</label>
-                      </div>
-                      <div>
-                          <input type="radio" id="2_5" name="entry.493417751" value="5"/>
-                          <label htmlFor="2_5">5</label>
+                          <div>
+                              <input type="radio" id="2_2" name="entry.39161322" value="Тут тоже я котик"/>
+                              <label htmlFor="2_2">Тут тоже я котик</label>
+                          </div>
                       </div>
                   </div>
+              </div>
 
-              </fieldset>
-
-              <div>Жмай уже *</div>
-              <fieldset>
-                  <legend>Шобаки</legend>
-
-                  <div>
-                      <input type="radio" id="3_1" name="entry.794209938" value="Люблю"/>
-                      <label htmlFor="3_1">Люблю</label>
+              <div className={"formCard"}>
+                  <div className={"cardHeader"}>
+                      Сюда тоже жмай
                   </div>
-
-                  <div>
-                      <input type="radio" id="3_2" name="entry.794209938" value="Тоже люблю"/>
-                      <label htmlFor="3_2">Тоже люблю</label>
+                  <div className={"cardBody"}>
+                      <img src={Image1}/>
+                      <div className={"ansverHolder"}>
+                          <div>
+                              <input type="radio" id="2_1" name="entry.493417751" value="1"/>
+                              <label htmlFor="2_1">1</label>
+                          </div>
+                          <div>
+                              <input type="radio" id="2_2" name="entry.493417751" value="2"/>
+                              <label htmlFor="2_2">2</label>
+                          </div>
+                          <div>
+                              <input type="radio" id="2_3" name="entry.493417751" value="3"/>
+                              <label htmlFor="2_3">3</label>
+                          </div>
+                          <div>
+                              <input type="radio" id="2_4" name="entry.493417751" value="4"/>
+                              <label htmlFor="2_4">4</label>
+                          </div>
+                          <div>
+                              <input type="radio" id="2_5" name="entry.493417751" value="5"/>
+                              <label htmlFor="2_5">5</label>
+                          </div>
+                      </div>
                   </div>
-              </fieldset>
+              </div>
 
-              <fieldset>
-                  <legend>Кошки</legend>
-
-                  <div>
-                      <input type="radio" id="3_1" name="entry.525125654" value="Люблю"/>
-                      <label htmlFor="3_1">Люблю</label>
+              <div className={"formCard"}>
+                  <div className={"cardHeader"}>
+                      Шобаки
                   </div>
+                  <div className={"cardBody"}>
+                      <div className={"ansverHolder"}>
+                          <div>
+                              <input type="radio" id="3_1" name="entry.794209938" value="Люблю"/>
+                              <label htmlFor="3_1">Люблю</label>
+                          </div>
 
-                  <div>
-                      <input type="radio" id="3_2" name="entry.525125654" value="Тоже люблю"/>
-                      <label htmlFor="3_2">Тоже люблю</label>
+                          <div>
+                              <input type="radio" id="3_2" name="entry.794209938" value="Тоже люблю"/>
+                              <label htmlFor="3_2">Тоже люблю</label>
+                          </div>
+                      </div>
                   </div>
-              </fieldset>
+              </div>
+
+              <div className={"formCard"}>
+                  <div className={"cardHeader"}>
+                      Кошки
+                  </div>
+                  <div className={"cardBody"}>
+                      <div className={"ansverHolder"}>
+                          <div>
+                              <input type="radio" id="3_1" name="entry.525125654" value="Люблю"/>
+                              <label htmlFor="3_1">Люблю</label>
+                          </div>
+
+                          <div>
+                              <input type="radio" id="3_2" name="entry.525125654" value="Тоже люблю"/>
+                              <label htmlFor="3_2">Тоже люблю</label>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
               <div className={"buttonHolder"}>
-                  <button className={"button-65"}>Submit</button>
+                  <button className={"button"}>Submit</button>
               </div>
           </form>
       </div>

@@ -7,6 +7,7 @@ import AdminPanel from "Scenes/Poll";
 import fetchJsonp from "fetch-jsonp";
 import {userIdKeyReceived, userLoggedIn} from "../store/actions/user";
 import SubmittedPage from "../Scenes/SubmittedPage";
+import {latestFormNumber} from "../constants";
 
 const RootRouter = () => {
   const user = useSelector(state => state.user);
@@ -23,9 +24,9 @@ const RootRouter = () => {
   }
 
   const renderForLoggedInUser = (component) => {
-    if (user.isLoggedIn && !user.formSubmitted) {
+    if (user.isLoggedIn && (!user.formSubmitted || user.formSubmitted < latestFormNumber)) {
       return component
-    } else if (user.formSubmitted) {
+    } else if (user.formSubmitted && user.formSubmitted >= latestFormNumber) {
       return <Navigate to={"/submitted"}/>
     } else {
       return <Navigate to={"/login"}/>
@@ -33,9 +34,9 @@ const RootRouter = () => {
   }
 
   const renderForSubmittedUser = (component) => {
-    if (user.isLoggedIn && user.formSubmitted) {
+    if (user.isLoggedIn && user.formSubmitted >= latestFormNumber) {
       return component
-    } else if (user.isLoggedIn && !user.formSubmitted) {
+    } else if (user.isLoggedIn && user.formSubmitted < latestFormNumber) {
       return <Navigate to={"/poll"}/>
     } else {
       return <Navigate to={"/login"}/>
@@ -54,7 +55,7 @@ const RootRouter = () => {
     }
 
     const hashParams = parseURLHashParams(location.pathname);
-    console.log('some hash params', location, location.pathname, hashParams);
+    //console.log('some hash params', location, location.pathname, hashParams);
     if (hashParams.user_id) {
       dispatch(userIdKeyReceived(hashParams));
       navigate("/login");
