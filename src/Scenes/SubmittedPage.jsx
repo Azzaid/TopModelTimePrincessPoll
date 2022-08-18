@@ -53,10 +53,10 @@ const SubmittedPage = (props) => {
             <StyledSubmittedPage>
                 <div className={"loginCard"}>
                     <div className={'cardHeader'}>
-                        Success!
+                        Успех!
                     </div>
                     <div className={"cardBody"}>
-                        You answer submitted. Please get lost and newer come back.
+                        Надеемся, нас вас ни попало ни капли... Ой, вы же без зонта!
                     </div>
                     <div className={'cardFooter'}>
                     </div>
