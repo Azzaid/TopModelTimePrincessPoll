@@ -5909,7 +5909,7 @@ var SubmittedPage = function SubmittedPage(props) {
       className: 'cardHeader'
     }, "\u0423\u0441\u043F\u0435\u0445!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "cardBody"
-    }, "\u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u043D\u0430\u0441 \u0432\u0430\u0441 \u043D\u0438 \u043F\u043E\u043F\u0430\u043B\u043E \u043D\u0438 \u043A\u0430\u043F\u043B\u0438... \u041E\u0439, \u0432\u044B \u0436\u0435 \u0431\u0435\u0437 \u0437\u043E\u043D\u0442\u0430!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "\u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u043D\u0430\u0441 \u0432\u0430\u0441 \u043De \u043F\u043E\u043F\u0430\u043B\u043E \u043D\u0438 \u043A\u0430\u043F\u043B\u0438... \u041E\u0439, \u0432\u044B \u0436\u0435 \u0431\u0435\u0437 \u0437\u043E\u043D\u0442\u0430!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: 'cardFooter'
     })));
   };
@@ -50955,4 +50955,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.2b02231fd8a4dc59a768.js.map
+//# sourceMappingURL=main.cccab9c7ad1cfa7a3355.js.map
