@@ -56,7 +56,7 @@ const SubmittedPage = (props) => {
                         Успех!
                     </div>
                     <div className={"cardBody"}>
-                        Надеемся, нас вас ни попало ни капли... Ой, вы же без зонта!
+                        Надеемся, нас вас нe попало ни капли... Ой, вы же без зонта!
                     </div>
                     <div className={'cardFooter'}>
                     </div>
