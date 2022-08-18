@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "Telegram bot with Express js, Firebase and React js admin panel.",
   "main": "index.js",
-  "homepage": "https://Azzaid.github.io/unanonimousPoll/",
+  "homepage": "https://Azzaid.github.io/TopModelTimePrincessPoll/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "webpack serve --env redirrectURL=http://localhost:3000/unanonimousPoll",
-    "build": "webpack --env redirrectURL=https://azzaid.github.io/unanonimousPoll"
+    "start": "webpack serve --env redirrectURL=http://localhost:3000/TopModelTimePrincessPoll",
+    "build": "webpack --env redirrectURL=https://azzaid.github.io/TopModelTimePrincessPoll"
   },
   "repository": {
     "type": "git",
