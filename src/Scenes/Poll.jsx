@@ -139,6 +139,11 @@ const Poll = (props) => {
                   dispatch(userFormSubmitted(latestFormNumber));
               })
           }}>
+              <Card header="ТМТПЗ-10">
+                  Привет, Принцесса!
+                  <br/>
+                  Рады видеть тебя здесь и надеемся, что ты по достоинству оценишь старания наших моделей)
+              </Card>
               {getCards(options)}
               <div className={"buttonHolder"}>
                   <button className={"button"}>Submit</button>
