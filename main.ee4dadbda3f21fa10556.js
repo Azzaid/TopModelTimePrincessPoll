@@ -5343,9 +5343,13 @@ var RootRouter = function RootRouter() {
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_8__.useNavigate)();
 
   var renderForNotLoggedInUser = function renderForNotLoggedInUser(component) {
+    console.log("render for not logged in", user);
+
     if (!user.isLoggedIn) {
+      console.log("passed");
       return component;
     } else {
+      console.log("redirect to login");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/poll"
       });
@@ -5353,13 +5357,18 @@ var RootRouter = function RootRouter() {
   };
 
   var renderForLoggedInUser = function renderForLoggedInUser(component) {
+    console.log("render for logged in", user);
+
     if (user.isLoggedIn && (!user.formSubmitted || user.formSubmitted < _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber)) {
+      console.log("passed");
       return component;
     } else if (user.formSubmitted && user.formSubmitted >= _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber) {
+      console.log("redirect to submitted");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/submitted"
       });
     } else {
+      console.log("redirect to login");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/login"
       });
@@ -5367,13 +5376,17 @@ var RootRouter = function RootRouter() {
   };
 
   var renderForSubmittedUser = function renderForSubmittedUser(component) {
+    console.log("render for submitted", user);
+
     if (user.isLoggedIn && user.formSubmitted >= _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber) {
       return component;
     } else if (user.isLoggedIn && user.formSubmitted < _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber) {
+      console.log("redirect to form");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/poll"
       });
     } else {
+      console.log("redirect to login");
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/login"
       });
@@ -5395,7 +5408,8 @@ var RootRouter = function RootRouter() {
       return normalizedObject;
     };
 
-    var hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#'))); //console.log('some hash params', location, location.pathname, hashParams);
+    var hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#')));
+    console.log('some hash params', location, location.pathname, hashParams);
 
     if (hashParams.user_id) {
       dispatch((0,_store_actions_user__WEBPACK_IMPORTED_MODULE_5__.userIdKeyReceived)(hashParams));
@@ -50955,4 +50969,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.c1a21024e64a902699cf.js.map
+//# sourceMappingURL=main.ee4dadbda3f21fa10556.js.map
