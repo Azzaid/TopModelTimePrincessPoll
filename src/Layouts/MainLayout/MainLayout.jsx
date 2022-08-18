@@ -2,9 +2,7 @@ import React, {useContext} from "react";
 import styled from "styled-components";
 import {ThemeContext} from "HOC/GlobalThemeProvider";
 import RootRouter from "Route/RootRouter";
-import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {userLoggedOut} from "../../store/actions/user";
 
 
 const StyledMainLayout = styled.div`
@@ -53,7 +51,7 @@ const MainLayout = (props) => {
   return (
     <StyledMainLayout>
       <div className={"header"}>
-        Test to test test
+        Mirror mirror on the wall...
       </div>
       <div className={"content"}>
         <RootRouter/>

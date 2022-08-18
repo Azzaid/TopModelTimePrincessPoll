@@ -1,65 +1,24 @@
 import React, {useRef} from "react";
 import styled from 'styled-components';
-import FacadeForm from "./facadeForm";
+
 import {useDispatch, useSelector} from "react-redux";
-import Image1 from "assets/images/Image1.png"
-import axios from "axios";
 import {userFormSubmitted} from "store/actions/user";
+
+import Card from "../Components/Card";
+
+import blackShit from "assets/images/BlackShit.png"
+import GentleRain from "assets/images/GentleRain.png"
+import WoodenFairy from "assets/images/WoodenFairy.png"
+import CyberWinner from "assets/images/CyberWinner.png"
+import {latestFormNumber} from "../constants";
 
 const StyledAdminPanelHolder = styled.div`
   max-width: 1200px;
   min-height: 100%;
-
-  fieldset {
-    margin: 10px;
-    border-color: #b386a7;
-    background-color: ${props => props.theme.infoCardBackgroundColor};
-  }
-
-  .formCard{
-    background-color: ${props => props.theme.infoCardBackgroundColor};
-    margin: 20px;
-    border-radius: 5px;
-
-    .cardHeader {
-      width: 100%;
-      height: 50px;
-      padding: 10px 20px;
-      box-sizing: border-box;
-      background-color: ${props => props.theme.accentBackgroundColor};
-      font-size: 25px;
-      line-height: 30px;
-      color: ${props => props.theme.accentTextColor};
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-
-    .cardBody {
-      padding: 10px 20px;
-      box-sizing: border-box;
-      color: ${props => props.theme.appBaseFontColor};
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 20px;
-      
-      .ansverHolder {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-    }
-  }
   
   img {
     max-height: 90vh;
     max-width: 90vh;
-  }
-  
-  .horizontalRadio {
-    display: flex;
   }
   
   .buttonHolder {
@@ -69,40 +28,7 @@ const StyledAdminPanelHolder = styled.div`
     align-items: flex-start;
     justify-content: center;
   }
-
-  /* CSS */
-.button-65 {
-  appearance: none;
-  backface-visibility: hidden;
-  background-color: #2f80ed;
-  border-radius: 10px;
-  border-style: none;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  height: 50px;
-  letter-spacing: normal;
-  line-height: 1.5;
-  outline: none;
-  overflow: hidden;
-  padding: 14px 30px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transform: translate3d(0, 0, 0);
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: top;
-  white-space: nowrap;
-}
-
+  
   button {
     width: 150px;
     height: 50px;
@@ -124,40 +50,57 @@ const StyledAdminPanelHolder = styled.div`
       filter: hue-rotate(360deg);
     }
   }
-
-  .button-65:hover {
-    background-color: #1366d6;
-    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
-    opacity: 1;
-    transform: translateY(0);
-    transition-duration: .35s;
-  }
-
-  .button-65:hover:after {
-    opacity: .5;
-  }
-
-  .button-65:active {
-    box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
-    transform: translateY(2px);
-    transition-duration: .35s;
-  }
-
-  .button-65:active:after {
-    opacity: 1;
-  }
-
-  @media (min-width: 768px) {
-    .button-65 {
-      padding: 14px 22px;
-      width: 176px;
-    }
-  }
 `
 
 const Poll = (props) => {
     const user = useSelector(store => store.user);
     const dispatch = useDispatch();
+
+    const options = [
+        {
+            header:"Оцените работу модели от 1 до 5",
+            name:"entry.1432100395",
+            image:blackShit,
+            options:[{name:"1", value:"1"}, {name:"2", value:"2"}, {name:"3", value:"3"}, {name:"4", value:"4"}, {name:"5", value:"5"}]
+        },
+        {
+            header:"Оцените работу модели от 1 до 5",
+            name:"entry.1777868231",
+            image: GentleRain,
+            options:[{name:"1", value:"1"}, {name:"2", value:"2"}, {name:"3", value:"3"}, {name:"4", value:"4"}, {name:"5", value:"5"}]
+        },
+        {
+            header:"Оцените работу модели от 1 до 5",
+            name:"entry.882651453",
+            image: WoodenFairy,
+            options:[{name:"1", value:"1"}, {name:"2", value:"2"}, {name:"3", value:"3"}, {name:"4", value:"4"}, {name:"5", value:"5"}]
+        },
+        {
+            header:"Оцените работу модели от 1 до 5",
+            name:"entry.2070195507",
+            image:CyberWinner,
+            options:[{name:"1", value:"1"}, {name:"2", value:"2"}, {name:"3", value:"3"}, {name:"4", value:"4"}, {name:"5", value:"5"}]
+        },
+    ]
+
+    function shuffleArray(array) {
+        const shuffledArray = [...array];
+
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = shuffledArray[i];
+            shuffledArray[i] = shuffledArray[j];
+            shuffledArray[j] = temp;
+        }
+
+        return shuffledArray
+    }
+
+    const getCards = (pollOptions) => {
+        return shuffleArray(pollOptions).map((option, index) => (
+            <Card key={index} {...option}/>
+        ))
+    }
 
   return (
     <StyledAdminPanelHolder>
@@ -180,8 +123,8 @@ const Poll = (props) => {
                   customFormData.append(key, customObj[key]);
               })*/
 
-              formData.append("entry.1997477910", user.userId);
-              formData.append("entry.649304355", user.userName);
+              formData.append("entry.1900145084", user.userId);
+              formData.append("entry.1708245170", user.userName);
 
               fetch(addressToSubmit, {
                   method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -190,101 +133,13 @@ const Poll = (props) => {
                   body: formData // body data type must match "Content-Type" header
               }).then(() => {
                   console.log("submit then")
-                  dispatch(userFormSubmitted(2));
+                  dispatch(userFormSubmitted(latestFormNumber));
               }).catch(() => {
                   console.log("submit catch")
-                  dispatch(userFormSubmitted(2));
+                  dispatch(userFormSubmitted(latestFormNumber));
               })
-
           }}>
-              <div className={"formCard"}>
-                  <div className={"cardHeader"}>
-                      Жмай
-                  </div>
-                  <div className={"cardBody"}>
-                      <div className={"ansverHolder"}>
-                          <div>
-                              <input type="radio" id="1_1" name="entry.39161322" value="Я котик"/>
-                              <label htmlFor="1_1">я котик</label>
-                          </div>
-
-                          <div>
-                              <input type="radio" id="2_2" name="entry.39161322" value="Тут тоже я котик"/>
-                              <label htmlFor="2_2">Тут тоже я котик</label>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div className={"formCard"}>
-                  <div className={"cardHeader"}>
-                      Сюда тоже жмай
-                  </div>
-                  <div className={"cardBody"}>
-                      <img src={Image1}/>
-                      <div className={"ansverHolder"}>
-                          <div>
-                              <input type="radio" id="2_1" name="entry.493417751" value="1"/>
-                              <label htmlFor="2_1">1</label>
-                          </div>
-                          <div>
-                              <input type="radio" id="2_2" name="entry.493417751" value="2"/>
-                              <label htmlFor="2_2">2</label>
-                          </div>
-                          <div>
-                              <input type="radio" id="2_3" name="entry.493417751" value="3"/>
-                              <label htmlFor="2_3">3</label>
-                          </div>
-                          <div>
-                              <input type="radio" id="2_4" name="entry.493417751" value="4"/>
-                              <label htmlFor="2_4">4</label>
-                          </div>
-                          <div>
-                              <input type="radio" id="2_5" name="entry.493417751" value="5"/>
-                              <label htmlFor="2_5">5</label>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div className={"formCard"}>
-                  <div className={"cardHeader"}>
-                      Шобаки
-                  </div>
-                  <div className={"cardBody"}>
-                      <div className={"ansverHolder"}>
-                          <div>
-                              <input type="radio" id="3_1" name="entry.794209938" value="Люблю"/>
-                              <label htmlFor="3_1">Люблю</label>
-                          </div>
-
-                          <div>
-                              <input type="radio" id="3_2" name="entry.794209938" value="Тоже люблю"/>
-                              <label htmlFor="3_2">Тоже люблю</label>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div className={"formCard"}>
-                  <div className={"cardHeader"}>
-                      Кошки
-                  </div>
-                  <div className={"cardBody"}>
-                      <div className={"ansverHolder"}>
-                          <div>
-                              <input type="radio" id="3_1" name="entry.525125654" value="Люблю"/>
-                              <label htmlFor="3_1">Люблю</label>
-                          </div>
-
-                          <div>
-                              <input type="radio" id="3_2" name="entry.525125654" value="Тоже люблю"/>
-                              <label htmlFor="3_2">Тоже люблю</label>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
+              {getCards(options)}
               <div className={"buttonHolder"}>
                   <button className={"button"}>Submit</button>
               </div>
