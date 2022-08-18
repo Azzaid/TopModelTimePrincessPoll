@@ -5395,7 +5395,7 @@ var RootRouter = function RootRouter() {
       return normalizedObject;
     };
 
-    var hashParams = parseURLHashParams(location.pathname); //console.log('some hash params', location, location.pathname, hashParams);
+    var hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#'))); //console.log('some hash params', location, location.pathname, hashParams);
 
     if (hashParams.user_id) {
       dispatch((0,_store_actions_user__WEBPACK_IMPORTED_MODULE_5__.userIdKeyReceived)(hashParams));
@@ -50955,4 +50955,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.cccab9c7ad1cfa7a3355.js.map
+//# sourceMappingURL=main.c1a21024e64a902699cf.js.map
