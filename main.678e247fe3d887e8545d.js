@@ -5821,7 +5821,9 @@ var Poll = function Poll(props) {
         dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(_constants__WEBPACK_IMPORTED_MODULE_8__.latestFormNumber));
       });
     }
-  }, getCards(options), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    header: "\u0422\u041C\u0422\u041F\u0417-10"
+  }, "\u041F\u0440\u0438\u0432\u0435\u0442, \u041F\u0440\u0438\u043D\u0446\u0435\u0441\u0441\u0430!", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "\u0420\u0430\u0434\u044B \u0432\u0438\u0434\u0435\u0442\u044C \u0442\u0435\u0431\u044F \u0437\u0434\u0435\u0441\u044C \u0438 \u043D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u0447\u0442\u043E \u0442\u044B \u043F\u043E \u0434\u043E\u0441\u0442\u043E\u0438\u043D\u0441\u0442\u0432\u0443 \u043E\u0446\u0435\u043D\u0438\u0448\u044C \u0441\u0442\u0430\u0440\u0430\u043D\u0438\u044F \u043D\u0430\u0448\u0438\u0445 \u043C\u043E\u0434\u0435\u043B\u0435\u0439)"), getCards(options), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "buttonHolder"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "button"
@@ -5905,9 +5907,9 @@ var SubmittedPage = function SubmittedPage(props) {
       className: "loginCard"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: 'cardHeader'
-    }, "Success!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "\u0423\u0441\u043F\u0435\u0445!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "cardBody"
-    }, "You answer submitted. Please get lost and newer come back."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    }, "\u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u043D\u0430\u0441 \u0432\u0430\u0441 \u043D\u0438 \u043F\u043E\u043F\u0430\u043B\u043E \u043D\u0438 \u043A\u0430\u043F\u043B\u0438... \u041E\u0439, \u0432\u044B \u0436\u0435 \u0431\u0435\u0437 \u0437\u043E\u043D\u0442\u0430!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: 'cardFooter'
     })));
   };
@@ -5993,7 +5995,7 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-var latestFormNumber = 3;
+var latestFormNumber = 4;
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -50953,4 +50955,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.0d59026aae5a24880b4f.js.map
+//# sourceMappingURL=main.678e247fe3d887e8545d.js.map
