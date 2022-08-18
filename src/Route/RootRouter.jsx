@@ -54,7 +54,7 @@ const RootRouter = () => {
       return normalizedObject
     }
 
-    const hashParams = parseURLHashParams(location.pathname);
+    const hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#')));
     //console.log('some hash params', location, location.pathname, hashParams);
     if (hashParams.user_id) {
       dispatch(userIdKeyReceived(hashParams));
