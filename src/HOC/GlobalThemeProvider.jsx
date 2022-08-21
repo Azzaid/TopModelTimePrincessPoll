@@ -72,6 +72,12 @@ const GlobalThemeProvider = (props) => {
     return window.matchMedia('(prefers-color-scheme: dark)').removeListener(modeMe);
   }, []);
 
+  useEffect(() => {
+    if (window.getComputedStyle(document.body).backgroundColor != "rgb(245, 238, 223)") {
+      setMode("dark")
+    }
+  }, [])
+
 
   const toggleTheme = () => {
     setIsThemeGreen(!isThemeGreen)

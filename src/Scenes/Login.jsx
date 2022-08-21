@@ -87,6 +87,8 @@ const Login = (props) => {
   const [searchParams ,setSearchParams] = useSearchParams();
   const user = useSelector(store => store.user);
 
+
+
   useEffect(() => {
     if (user.userId) {
       fetchJsonp(`https://api.vk.com/method/users.get?user_ids=${user.userId}&access_token=${user.access_token}&v=5.131`)
@@ -117,6 +119,16 @@ const Login = (props) => {
   const getLoginCard = () => {
     return (
       <StyledLoginHolder>
+        {(navigator.userAgent.includes("MiuiB")) &&
+            <Card header={'For Xiaomi browser'}>
+              Mi browser black theme feature is highly experimental. Please turn it off to enjoy our app at full.
+            </Card>
+        }
+        {(navigator.userAgent.includes("Safari")) &&
+            <Card header={'For Safari browser'}>
+              Iphone "hide my IP" feature is incompatible with VK user data protection algorithms. Please turn it off or use vpn to login.
+            </Card>
+        }
         <Card header={"Login"}>
           <a className={"button-65"}
              href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/TopModelTimePrincessPoll&scope=account&response_type=token&v=5.131`}>
