@@ -5093,6 +5093,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ThemeContext": () => (/* binding */ ThemeContext),
 /* harmony export */   "GlobalStyles": () => (/* binding */ GlobalStyles),
+/* harmony export */   "yetAnotherPinkScheme": () => (/* binding */ yetAnotherPinkScheme),
 /* harmony export */   "globalPinkStyle": () => (/* binding */ globalPinkStyle),
 /* harmony export */   "globalDarkStyle": () => (/* binding */ globalDarkStyle),
 /* harmony export */   "globalLightStyle": () => (/* binding */ globalLightStyle),
@@ -5126,6 +5127,20 @@ var GlobalStyles = (0,styled_components__WEBPACK_IMPORTED_MODULE_2__.createGloba
   return props.theme.basicBackGroundColor;
 }, assets_fonts_SupermercadoOne_Regular_ttf__WEBPACK_IMPORTED_MODULE_1__["default"]);
 _c = GlobalStyles;
+var yetAnotherPinkScheme = {
+  appBaseFontColor: "#68597a",
+  // all text
+  navbarBackgroundColor: "#c3909c",
+  // header background
+  basicBackGroundColor: "#f5eedf",
+  // background
+  infoCardBackgroundColor: "#eaccca",
+  // card background
+  accentBackgroundColor: "#c3909c",
+  // card header background
+  accentTextColor: "#68597a" // header text color
+
+};
 var globalPinkStyle = {
   appBaseFontColor: "white",
   navbarBackgroundColor: "#ffbfbf",
@@ -5164,7 +5179,7 @@ var GlobalThemeProvider = function GlobalThemeProvider(props) {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(styled_components__WEBPACK_IMPORTED_MODULE_2__.ThemeProvider, {
-    theme: globalPinkStyle
+    theme: yetAnotherPinkScheme
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ThemeContext.Provider, {
     value: toggleTheme
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(GlobalStyles, null), props.children));
@@ -5343,13 +5358,12 @@ var RootRouter = function RootRouter() {
   var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_8__.useNavigate)();
 
   var renderForNotLoggedInUser = function renderForNotLoggedInUser(component) {
-    console.log("render for not logged in", user);
-
+    //console.log("render for not logged in", user)
     if (!user.isLoggedIn) {
-      console.log("passed");
+      //console.log("passed")
       return component;
     } else {
-      console.log("redirect to login");
+      //console.log("redirect to login")
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/poll"
       });
@@ -5357,18 +5371,17 @@ var RootRouter = function RootRouter() {
   };
 
   var renderForLoggedInUser = function renderForLoggedInUser(component) {
-    console.log("render for logged in", user);
-
+    //console.log("render for logged in", user)
     if (user.isLoggedIn && (!user.formSubmitted || user.formSubmitted < _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber)) {
-      console.log("passed");
+      //console.log("passed")
       return component;
     } else if (user.formSubmitted && user.formSubmitted >= _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber) {
-      console.log("redirect to submitted");
+      //console.log("redirect to submitted")
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/submitted"
       });
     } else {
-      console.log("redirect to login");
+      //console.log("redirect to login")
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/login"
       });
@@ -5376,17 +5389,16 @@ var RootRouter = function RootRouter() {
   };
 
   var renderForSubmittedUser = function renderForSubmittedUser(component) {
-    console.log("render for submitted", user);
-
+    //console.log("render for submitted", user)
     if (user.isLoggedIn && user.formSubmitted >= _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber) {
       return component;
     } else if (user.isLoggedIn && user.formSubmitted < _constants__WEBPACK_IMPORTED_MODULE_7__.latestFormNumber) {
-      console.log("redirect to form");
+      //console.log("redirect to form")
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/poll"
       });
     } else {
-      console.log("redirect to login");
+      //console.log("redirect to login")
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Navigate, {
         to: "/login"
       });
@@ -5408,8 +5420,7 @@ var RootRouter = function RootRouter() {
       return normalizedObject;
     };
 
-    var hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#')));
-    console.log('some hash params', location, location.pathname, hashParams);
+    var hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#'))); //console.log('some hash params', window.location.href, hashParams);
 
     if (hashParams.user_id) {
       dispatch((0,_store_actions_user__WEBPACK_IMPORTED_MODULE_5__.userIdKeyReceived)(hashParams));
@@ -5689,7 +5700,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var StyledAdminPanelHolder = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Poll__StyledAdminPanelHolder",
   componentId: "sc-rdp4ug-0"
-})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vh;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#6dd6d1;border:none;border-radius:10px;box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid #6dd6d1;animation:hueRotation 2s linear infinite;}@keyframes hueRotation{to{filter:hue-rotate(360deg);}}"]);
+})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vh;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 5s linear infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{to{filter:hue-rotate(360deg);}}"]);
 _c = StyledAdminPanelHolder;
 
 var Poll = function Poll(props) {
@@ -5805,35 +5816,30 @@ var Poll = function Poll(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledAdminPanelHolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     onSubmit: function onSubmit(event) {
       event.preventDefault();
-      var formData = new FormData(event.target);
-      var addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse";
-      /*const anotherSubmitAddress = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7E7AZs24OQ5EjzHXeHdfHHGZalqYetDpZ8NiDN1oqUcLbxQ/formResponse"
+      /*const formData = new FormData(event.target);
+      const addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse"
+          /!*const anotherSubmitAddress = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7E7AZs24OQ5EjzHXeHdfHHGZalqYetDpZ8NiDN1oqUcLbxQ/formResponse"
         const customObj = {"entry.1562589015": 234,
       "entry.848703632": 1234,
       "entry.1787163590": "Kaneshna Dasha!"}
         const customFormData = new FormData();
         Object.keys((customObj)).forEach(key => {
           customFormData.append(key, customObj[key]);
-      })*/
-
-      formData.append("entry.1900145084", user.userId);
+      })*!/
+        formData.append("entry.1900145084", user.userId);
       formData.append("entry.1708245170", user.userName);
-      fetch(addressToSubmit, {
-        method: 'POST',
-        // *GET, POST, PUT, DELETE, etc.
-        mode: 'no-cors',
-        // no-cors, *cors, same-origin
-        redirect: 'follow',
-        // manual, *follow, error
-        body: formData // body data type must match "Content-Type" header
-
-      }).then(function () {
-        console.log("submit then");
-        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(_constants__WEBPACK_IMPORTED_MODULE_8__.latestFormNumber));
-      })["catch"](function () {
-        console.log("submit catch");
-        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(_constants__WEBPACK_IMPORTED_MODULE_8__.latestFormNumber));
-      });
+        fetch(addressToSubmit, {
+          method: 'POST', // *GET, POST, PUT, DELETE, etc.
+          mode: 'no-cors', // no-cors, *cors, same-origin
+          redirect: 'follow', // manual, *follow, error
+          body: formData // body data type must match "Content-Type" header
+      }).then(() => {
+          console.log("submit then")
+          dispatch(userFormSubmitted(latestFormNumber));
+      }).catch(() => {
+          console.log("submit catch")
+          dispatch(userFormSubmitted(latestFormNumber));
+      })*/
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
     header: "\u0422\u041C\u0422\u041F\u0417-10"
@@ -6009,7 +6015,7 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-var latestFormNumber = 5;
+var latestFormNumber = 6;
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -50969,4 +50975,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.ee4dadbda3f21fa10556.js.map
+//# sourceMappingURL=main.c116fcc42df380eed079.js.map
