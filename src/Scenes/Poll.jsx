@@ -58,6 +58,8 @@ const StyledAdminPanelHolder = styled.div`
 const Poll = (props) => {
     const user = useSelector(store => store.user);
     const dispatch = useDispatch();
+    const isMe = navigator.userAgent.indexOf(" Mi ") != -1;
+    const backgroundColor = document.body.style.backgroundColor;
 
     const options = [
         {
@@ -142,6 +144,12 @@ const Poll = (props) => {
                   dispatch(userFormSubmitted(latestFormNumber));
               })*/
           }}>
+              {isMe &&
+                  <Card header={"For crappy Mi browser"}>
+                      Hello. Sun is shining. Temperature under the dome is about 20C. And background color is inverted to be {backgroundColor}
+                      Expected to be about #0a1120
+                  </Card>
+              }
               <Card header="ТМТПЗ-10">
                   Привет, Принцесса!
                   <br/>
