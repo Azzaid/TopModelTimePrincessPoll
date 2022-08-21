@@ -5712,6 +5712,8 @@ var Poll = function Poll(props) {
     return store.user;
   });
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  var isMe = navigator.userAgent.indexOf(" Mi ") != -1;
+  var backgroundColor = document.body.style.backgroundColor;
   var options = [{
     header: "Оцените работу модели от 1 до 5",
     name: "entry.1432100395",
@@ -5843,7 +5845,9 @@ var Poll = function Poll(props) {
           dispatch(userFormSubmitted(latestFormNumber));
       })*/
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, isMe && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    header: "For crappy Mi browser"
+  }, "Hello. Sun is shining. Temperature under the dome is about 20C. And background color is inverted to be ", backgroundColor, "Expected to be about #0a1120"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
     header: "\u0422\u041C\u0422\u041F\u0417-10"
   }, "\u041F\u0440\u0438\u0432\u0435\u0442, \u041F\u0440\u0438\u043D\u0446\u0435\u0441\u0441\u0430!", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "\u0420\u0430\u0434\u044B \u0432\u0438\u0434\u0435\u0442\u044C \u0442\u0435\u0431\u044F \u0437\u0434\u0435\u0441\u044C \u0438 \u043D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u0447\u0442\u043E \u0442\u044B \u043F\u043E \u0434\u043E\u0441\u0442\u043E\u0438\u043D\u0441\u0442\u0432\u0443 \u043E\u0446\u0435\u043D\u0438\u0448\u044C \u0441\u0442\u0430\u0440\u0430\u043D\u0438\u044F \u043D\u0430\u0448\u0438\u0445 \u043C\u043E\u0434\u0435\u043B\u0435\u0439)"), getCards(options), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "buttonHolder"
@@ -50955,4 +50959,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.5eb2c7aa6dfacb964ce2.js.map
+//# sourceMappingURL=main.2d5cf0bebc8b2137419c.js.map
