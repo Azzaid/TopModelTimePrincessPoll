@@ -15,12 +15,12 @@ import {latestFormNumber} from "../constants";
 const StyledAdminPanelHolder = styled.div`
   max-width: 1200px;
   min-height: 100%;
-  
+
   img {
     max-height: 90vh;
     max-width: 90vh;
   }
-  
+
   .buttonHolder {
     height: 70px;
     width: 100%;
@@ -28,21 +28,24 @@ const StyledAdminPanelHolder = styled.div`
     align-items: flex-start;
     justify-content: center;
   }
-  
+
   button {
     width: 150px;
     height: 50px;
     cursor: pointer;
-    background: #6dd6d1;
+    background: #d26cba;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 10px 25px #57aba7, 0px -10px 25px #a6fffa, inset 0px -5px 10px #57aba7, inset 0px 5px 10px #a6fffa;
     font-family: 'Damion', cursive;
     color: white;
     font-size: 20px;
     transition: 500ms;
-    border: 2px solid #6dd6d1;
-    animation: hueRotation 2s linear infinite;
+    border: 2px solid rgba(210, 108, 186, 0.57);
+    animation: hueRotation 5s linear infinite;
+
+    &:hover {
+      box-shadow: 0px 10px 25px #57aba7, 0px -10px 25px #a6fffa, inset 0px -5px 10px #57aba7, inset 0px 5px 10px #a6fffa;
+    }
   }
 
   @keyframes hueRotation {
@@ -107,11 +110,11 @@ const Poll = (props) => {
       <div>
           <form onSubmit={(event) => {
               event.preventDefault();
-              const formData = new FormData(event.target);
+              /*const formData = new FormData(event.target);
               const addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse"
 
 
-              /*const anotherSubmitAddress = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7E7AZs24OQ5EjzHXeHdfHHGZalqYetDpZ8NiDN1oqUcLbxQ/formResponse"
+              /!*const anotherSubmitAddress = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc7E7AZs24OQ5EjzHXeHdfHHGZalqYetDpZ8NiDN1oqUcLbxQ/formResponse"
 
               const customObj = {"entry.1562589015": 234,
               "entry.848703632": 1234,
@@ -121,7 +124,7 @@ const Poll = (props) => {
 
               Object.keys((customObj)).forEach(key => {
                   customFormData.append(key, customObj[key]);
-              })*/
+              })*!/
 
               formData.append("entry.1900145084", user.userId);
               formData.append("entry.1708245170", user.userName);
@@ -137,7 +140,7 @@ const Poll = (props) => {
               }).catch(() => {
                   console.log("submit catch")
                   dispatch(userFormSubmitted(latestFormNumber));
-              })
+              })*/
           }}>
               <Card header="ТМТПЗ-10">
                   Привет, Принцесса!

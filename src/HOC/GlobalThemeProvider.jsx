@@ -22,6 +22,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 `
 
+export const yetAnotherPinkScheme = {
+  appBaseFontColor: "#68597a", // all text
+  navbarBackgroundColor: "#c3909c", // header background
+  basicBackGroundColor: "#f5eedf", // background
+  infoCardBackgroundColor: "#eaccca", // card background
+  accentBackgroundColor: "#c3909c", // card header background
+  accentTextColor: "#68597a", // header text color
+}
+
 export const globalPinkStyle = {
   appBaseFontColor: "white",
   navbarBackgroundColor: "#ffbfbf",
@@ -57,7 +66,7 @@ const GlobalThemeProvider = (props) => {
   }
 
   return (
-      <ThemeProvider theme={globalPinkStyle}>
+      <ThemeProvider theme={yetAnotherPinkScheme}>
         <ThemeContext.Provider value={toggleTheme}>
           <GlobalStyles/>
           {props.children}

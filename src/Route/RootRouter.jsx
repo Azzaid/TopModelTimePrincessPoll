@@ -16,29 +16,39 @@ const RootRouter = () => {
   const navigate = useNavigate();
 
   const renderForNotLoggedInUser = (component) => {
+    //console.log("render for not logged in", user)
     if (!user.isLoggedIn) {
+      //console.log("passed")
       return component
     } else {
+      //console.log("redirect to login")
       return <Navigate to={"/poll"}/>
     }
   }
 
   const renderForLoggedInUser = (component) => {
+    //console.log("render for logged in", user)
     if (user.isLoggedIn && (!user.formSubmitted || user.formSubmitted < latestFormNumber)) {
+      //console.log("passed")
       return component
     } else if (user.formSubmitted && user.formSubmitted >= latestFormNumber) {
+      //console.log("redirect to submitted")
       return <Navigate to={"/submitted"}/>
     } else {
+      //console.log("redirect to login")
       return <Navigate to={"/login"}/>
     }
   }
 
   const renderForSubmittedUser = (component) => {
+    //console.log("render for submitted", user)
     if (user.isLoggedIn && user.formSubmitted >= latestFormNumber) {
       return component
     } else if (user.isLoggedIn && user.formSubmitted < latestFormNumber) {
+      //console.log("redirect to form")
       return <Navigate to={"/poll"}/>
     } else {
+      //console.log("redirect to login")
       return <Navigate to={"/login"}/>
     }
   }
@@ -55,7 +65,7 @@ const RootRouter = () => {
     }
 
     const hashParams = parseURLHashParams(window.location.href.slice(window.location.href.lastIndexOf('#')));
-    //console.log('some hash params', location, location.pathname, hashParams);
+    //console.log('some hash params', window.location.href, hashParams);
     if (hashParams.user_id) {
       dispatch(userIdKeyReceived(hashParams));
       navigate("/login");
