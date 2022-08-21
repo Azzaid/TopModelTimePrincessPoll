@@ -5688,7 +5688,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var StyledAdminPanelHolder = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Poll__StyledAdminPanelHolder",
   componentId: "sc-rdp4ug-0"
-})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vw;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 5s linear infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{to{filter:hue-rotate(360deg);}}"]);
+})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vw;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 2s alternate infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{0%{filter:hue-rotate(30deg);}50%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(-30deg);}}"]);
 _c = StyledAdminPanelHolder;
 
 var Poll = function Poll(props) {
@@ -50941,4 +50941,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.eda0f5aa443b81e49931.js.map
+//# sourceMappingURL=main.748caf0eababd42d47c1.js.map
