@@ -18,7 +18,7 @@ const StyledAdminPanelHolder = styled.div`
 
   img {
     max-height: 90vh;
-    max-width: 90vh;
+    max-width: 90vw;
   }
 
   .buttonHolder {

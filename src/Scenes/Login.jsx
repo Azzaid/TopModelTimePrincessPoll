@@ -7,6 +7,7 @@ import serverAPI from "api/instance";
 import {useDispatch, useSelector} from "react-redux";
 import {userLoggedIn} from "store/actions/user";
 import {useLocation, useParams, useSearchParams} from "react-router-dom";
+import Card from "Components/Card";
 
 const StyledLoginHolder = styled.div`
   width: 100%;
@@ -14,36 +15,6 @@ const StyledLoginHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  .loginCard{
-    width: 400px;
-    height: 300px;
-    background-color: ${props => props.theme.infoCardBackgroundColor};
-    margin: 20px;
-    border-radius: 5px;
-
-    .cardHeader {
-      width: 100%;
-      height: 50px;
-      padding: 10px 20px;
-      box-sizing: border-box;
-      background-color: ${props => props.theme.accentBackgroundColor};
-      font-size: 25px;
-      line-height: 30px;
-      color: ${props => props.theme.accentTextColor};
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-
-    .cardBody {
-      padding: 10px 20px;
-      box-sizing: border-box;
-      color: ${props => props.theme.appBaseFontColor};
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
 
   .button-65 {
     appearance: none;
@@ -146,19 +117,12 @@ const Login = (props) => {
   const getLoginCard = () => {
     return (
       <StyledLoginHolder>
-        <div className={"loginCard"}>
-          <div className={'cardHeader'}>
-            Login
-          </div>
-          <div className={"cardBody"}>
-            <a className={"button-65"}
-               href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/TopModelTimePrincessPoll&scope=account&response_type=token&v=5.131`}>
-              Login with VK
-            </a>
-          </div>
-          <div className={'cardFooter'}>
-          </div>
-        </div>
+        <Card header={"Login"}>
+          <a className={"button-65"}
+             href={`https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/TopModelTimePrincessPoll&scope=account&response_type=token&v=5.131`}>
+            Login with VK
+          </a>
+        </Card>
       </StyledLoginHolder>
     )
   }

@@ -4,12 +4,11 @@ import styled from "styled-components"
 
 const StyledCard = styled.div`
   background-color: ${props => props.theme.infoCardBackgroundColor};
-  margin: 20px;
+  margin: 20px 0px;
   border-radius: 5px;
 
   .cardHeader {
     width: 100%;
-    height: 50px;
     padding: 10px 20px;
     box-sizing: border-box;
     background-color: ${props => props.theme.accentBackgroundColor};
