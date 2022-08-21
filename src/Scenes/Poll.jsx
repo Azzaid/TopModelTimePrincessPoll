@@ -41,7 +41,7 @@ const StyledAdminPanelHolder = styled.div`
     font-size: 20px;
     transition: 500ms;
     border: 2px solid rgba(210, 108, 186, 0.57);
-    animation: hueRotation 5s linear infinite;
+    animation: hueRotation 2s alternate infinite;
 
     &:hover {
       box-shadow: 0px 10px 25px #57aba7, 0px -10px 25px #a6fffa, inset 0px -5px 10px #57aba7, inset 0px 5px 10px #a6fffa;
@@ -49,9 +49,9 @@ const StyledAdminPanelHolder = styled.div`
   }
 
   @keyframes hueRotation {
-    to {
-      filter: hue-rotate(360deg);
-    }
+    0%   {filter: hue-rotate(30deg);}
+    50%  {filter: hue-rotate(0deg);}
+    100% {filter: hue-rotate(-30deg);}
   }
 `
 
