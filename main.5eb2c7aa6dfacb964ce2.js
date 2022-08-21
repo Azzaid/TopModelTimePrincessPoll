@@ -5174,18 +5174,32 @@ var GlobalThemeProvider = function GlobalThemeProvider(props) {
       isThemeGreen = _useState2[0],
       setIsThemeGreen = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light"),
+      _useState4 = _slicedToArray(_useState3, 2),
+      mode = _useState4[0],
+      setMode = _useState4[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var modeMe = function modeMe(e) {
+      setMode(e.matches ? "dark" : "light");
+    };
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
+    return window.matchMedia('(prefers-color-scheme: dark)').removeListener(modeMe);
+  }, []);
+
   var toggleTheme = function toggleTheme() {
     setIsThemeGreen(!isThemeGreen);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(styled_components__WEBPACK_IMPORTED_MODULE_2__.ThemeProvider, {
-    theme: yetAnotherPinkScheme
+    theme: mode == "dark" ? globalDarkStyle : yetAnotherPinkScheme
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ThemeContext.Provider, {
     value: toggleTheme
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(GlobalStyles, null), props.children));
 };
 
-_s2(GlobalThemeProvider, "vrSlJ2+JAdoFjtDolD/5UA2lvSg=");
+_s2(GlobalThemeProvider, "byQEgixSZhmRkVpR9vCxf0N39Qc=");
 
 _c2 = GlobalThemeProvider;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_c3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(GlobalThemeProvider));
@@ -50941,4 +50955,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.748caf0eababd42d47c1.js.map
+//# sourceMappingURL=main.5eb2c7aa6dfacb964ce2.js.map
