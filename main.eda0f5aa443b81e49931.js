@@ -4878,7 +4878,7 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Card__StyledCard",
   componentId: "sc-syxivx-0"
-})(["background-color:", ";margin:20px;border-radius:5px;.cardHeader{width:100%;height:50px;padding:10px 20px;box-sizing:border-box;background-color:", ";font-size:25px;line-height:30px;color:", ";border-top-left-radius:5px;border-top-right-radius:5px;}.cardBody{padding:10px 20px;box-sizing:border-box;color:", ";display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:20px;.answerHolder{width:100%;display:flex;align-items:center;justify-content:space-evenly;}}"], function (props) {
+})(["background-color:", ";margin:20px 0px;border-radius:5px;.cardHeader{width:100%;padding:10px 20px;box-sizing:border-box;background-color:", ";font-size:25px;line-height:30px;color:", ";border-top-left-radius:5px;border-top-right-radius:5px;}.cardBody{padding:10px 20px;box-sizing:border-box;color:", ";display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:20px;.answerHolder{width:100%;display:flex;align-items:center;justify-content:space-evenly;}}"], function (props) {
   return props.theme.infoCardBackgroundColor;
 }, function (props) {
   return props.theme.accentBackgroundColor;
@@ -5496,13 +5496,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var fetch_jsonp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fetch-jsonp */ "./node_modules/fetch-jsonp/build/fetch-jsonp.js");
 /* harmony import */ var fetch_jsonp__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(fetch_jsonp__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var api_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! api/instance */ "./src/api/instance.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var store_actions_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! store/actions/user */ "./src/store/actions/user.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var Components_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/Card */ "./src/Components/Card.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -5527,18 +5528,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var StyledLoginHolder = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+
+var StyledLoginHolder = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "Login__StyledLoginHolder",
   componentId: "sc-kkqmm5-0"
-})(["width:100%;height:100%;display:flex;align-items:center;justify-content:center;.loginCard{width:400px;height:300px;background-color:", ";margin:20px;border-radius:5px;.cardHeader{width:100%;height:50px;padding:10px 20px;box-sizing:border-box;background-color:", ";font-size:25px;line-height:30px;color:", ";border-top-left-radius:5px;border-top-right-radius:5px;}.cardBody{padding:10px 20px;box-sizing:border-box;color:", ";display:flex;align-items:center;justify-content:center;}}.button-65{appearance:none;backface-visibility:hidden;background-color:#2f80ed;border-radius:10px;border-style:none;box-shadow:none;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:Inter,-apple-system,system-ui,\"Segoe UI\",Helvetica,Arial,sans-serif;font-size:15px;font-weight:500;height:50px;letter-spacing:normal;line-height:1.5;outline:none;overflow:hidden;padding:14px 30px;position:relative;text-align:center;text-decoration:none;transform:translate3d(0,0,0);transition:all .3s;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:top;white-space:nowrap;}.button-65:hover{background-color:#1366d6;box-shadow:rgba(0,0,0,.05) 0 5px 30px,rgba(0,0,0,.05) 0 1px 4px;opacity:1;transform:translateY(0);transition-duration:.35s;}.button-65:hover:after{opacity:.5;}.button-65:active{box-shadow:rgba(0,0,0,.1) 0 3px 6px 0,rgba(0,0,0,.1) 0 0 10px 0,rgba(0,0,0,.1) 0 1px 4px -1px;transform:translateY(2px);transition-duration:.35s;}.button-65:active:after{opacity:1;}@media (min-width:768px){.button-65{padding:14px 22px;width:176px;}}"], function (props) {
-  return props.theme.infoCardBackgroundColor;
-}, function (props) {
-  return props.theme.accentBackgroundColor;
-}, function (props) {
-  return props.theme.accentTextColor;
-}, function (props) {
-  return props.theme.appBaseFontColor;
-});
+})(["width:100%;height:100%;display:flex;align-items:center;justify-content:center;.button-65{appearance:none;backface-visibility:hidden;background-color:#2f80ed;border-radius:10px;border-style:none;box-shadow:none;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:Inter,-apple-system,system-ui,\"Segoe UI\",Helvetica,Arial,sans-serif;font-size:15px;font-weight:500;height:50px;letter-spacing:normal;line-height:1.5;outline:none;overflow:hidden;padding:14px 30px;position:relative;text-align:center;text-decoration:none;transform:translate3d(0,0,0);transition:all .3s;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:top;white-space:nowrap;}.button-65:hover{background-color:#1366d6;box-shadow:rgba(0,0,0,.05) 0 5px 30px,rgba(0,0,0,.05) 0 1px 4px;opacity:1;transform:translateY(0);transition-duration:.35s;}.button-65:hover:after{opacity:.5;}.button-65:active{box-shadow:rgba(0,0,0,.1) 0 3px 6px 0,rgba(0,0,0,.1) 0 0 10px 0,rgba(0,0,0,.1) 0 1px 4px -1px;transform:translateY(2px);transition-duration:.35s;}.button-65:active:after{opacity:1;}@media (min-width:768px){.button-65{padding:14px 22px;width:176px;}}"]);
 _c = StyledLoginHolder;
 
 var Login = function Login(props) {
@@ -5566,7 +5560,7 @@ var Login = function Login(props) {
       error = _useState8[0],
       setError = _useState8[1];
 
-  var _useSearchParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useSearchParams)(),
+  var _useSearchParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_7__.useSearchParams)(),
       _useSearchParams2 = _slicedToArray(_useSearchParams, 2),
       searchParams = _useSearchParams2[0],
       setSearchParams = _useSearchParams2[1];
@@ -5601,25 +5595,19 @@ var Login = function Login(props) {
   };
 
   var getLoginCard = function getLoginCard() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLoginHolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "loginCard"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: 'cardHeader'
-    }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "cardBody"
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLoginHolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      header: "Login"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       className: "button-65",
       href: "https://oauth.vk.com/authorize?client_id=8228696&display=popup&redirect_uri=https://azzaid.github.io/TopModelTimePrincessPoll&scope=account&response_type=token&v=5.131"
-    }, "Login with VK")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: 'cardFooter'
-    })));
+    }, "Login with VK")));
   };
 
   return getLoginCard();
 };
 
 _s2(Login, "9+4gmn8An2cV+F9k5rvP7oMnKGM=", false, function () {
-  return [react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch, react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useSearchParams, react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector];
+  return [react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch, react_router_dom__WEBPACK_IMPORTED_MODULE_7__.useSearchParams, react_redux__WEBPACK_IMPORTED_MODULE_3__.useSelector];
 });
 
 _c2 = Login;
@@ -5700,7 +5688,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var StyledAdminPanelHolder = styled_components__WEBPACK_IMPORTED_MODULE_9__["default"].div.withConfig({
   displayName: "Poll__StyledAdminPanelHolder",
   componentId: "sc-rdp4ug-0"
-})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vh;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 5s linear infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{to{filter:hue-rotate(360deg);}}"]);
+})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vw;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 5s linear infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{to{filter:hue-rotate(360deg);}}"]);
 _c = StyledAdminPanelHolder;
 
 var Poll = function Poll(props) {
@@ -5891,47 +5879,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var fetch_jsonp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fetch-jsonp */ "./node_modules/fetch-jsonp/build/fetch-jsonp.js");
-/* harmony import */ var fetch_jsonp__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(fetch_jsonp__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var api_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! api/instance */ "./src/api/instance.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var store_actions_user__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! store/actions/user */ "./src/store/actions/user.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var Components_Card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/Card */ "./src/Components/Card.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
 
 
 
-
-
-
-
-var StyledSubmittedPage = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+var StyledSubmittedPage = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div.withConfig({
   displayName: "SubmittedPage__StyledSubmittedPage",
   componentId: "sc-1iqvgi6-0"
-})(["width:100%;height:100%;display:flex;align-items:center;justify-content:center;.loginCard{width:400px;height:300px;background-color:", ";margin:20px;border-radius:5px;.cardHeader{width:100%;height:50px;padding:10px 20px;box-sizing:border-box;background-color:", ";font-size:25px;line-height:30px;color:", ";border-top-left-radius:5px;border-top-right-radius:5px;}.cardBody{padding:10px 20px;box-sizing:border-box;color:", ";display:flex;align-items:center;justify-content:center;}}"], function (props) {
-  return props.theme.infoCardBackgroundColor;
-}, function (props) {
-  return props.theme.accentBackgroundColor;
-}, function (props) {
-  return props.theme.accentTextColor;
-}, function (props) {
-  return props.theme.appBaseFontColor;
-});
+})(["width:100%;height:100%;display:flex;align-items:center;justify-content:center;"]);
 _c = StyledSubmittedPage;
 
 var SubmittedPage = function SubmittedPage(props) {
   var getLoginCard = function getLoginCard() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledSubmittedPage, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "loginCard"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: 'cardHeader'
-    }, "\u0423\u0441\u043F\u0435\u0445!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "cardBody"
-    }, "\u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u043D\u0430\u0441 \u0432\u0430\u0441 \u043De \u043F\u043E\u043F\u0430\u043B\u043E \u043D\u0438 \u043A\u0430\u043F\u043B\u0438... \u041E\u0439, \u0432\u044B \u0436\u0435 \u0431\u0435\u0437 \u0437\u043E\u043D\u0442\u0430!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: 'cardFooter'
-    })));
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledSubmittedPage, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      header: "Успех!"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "\u041D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u043D\u0430\u0441 \u0432\u0430\u0441 \u043De \u043F\u043E\u043F\u0430\u043B\u043E \u043D\u0438 \u043A\u0430\u043F\u043B\u0438... \u041E\u0439, \u0432\u044B \u0436\u0435 \u0431\u0435\u0437 \u0437\u043E\u043D\u0442\u0430!")));
   };
 
   return getLoginCard();
@@ -50975,4 +50941,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.c116fcc42df380eed079.js.map
+//# sourceMappingURL=main.eda0f5aa443b81e49931.js.map
