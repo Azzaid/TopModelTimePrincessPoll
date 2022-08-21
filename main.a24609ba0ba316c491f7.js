@@ -5187,6 +5187,11 @@ var GlobalThemeProvider = function GlobalThemeProvider(props) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
     return window.matchMedia('(prefers-color-scheme: dark)').removeListener(modeMe);
   }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (window.getComputedStyle(document.body).backgroundColor != "rgb(245, 238, 223)") {
+      setMode("dark");
+    }
+  }, []);
 
   var toggleTheme = function toggleTheme() {
     setIsThemeGreen(!isThemeGreen);
@@ -5199,7 +5204,7 @@ var GlobalThemeProvider = function GlobalThemeProvider(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(GlobalStyles, null), props.children));
 };
 
-_s2(GlobalThemeProvider, "byQEgixSZhmRkVpR9vCxf0N39Qc=");
+_s2(GlobalThemeProvider, "c/+bpkUmG01KECgwBKENotKF7Lc=");
 
 _c2 = GlobalThemeProvider;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_c3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(GlobalThemeProvider));
@@ -5609,7 +5614,11 @@ var Login = function Login(props) {
   };
 
   var getLoginCard = function getLoginCard() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLoginHolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLoginHolder, null, navigator.userAgent.includes("MiuiB") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      header: 'For Xiaomi browser'
+    }, "Mi browser black theme feature is highly experimental. Please turn it off to enjoy our app at full."), navigator.userAgent.includes("Safari") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      header: 'For Safari browser'
+    }, "Iphone \"hide my IP\" feature is incompatible with VK user data protection algorithms. Please turn it off or use vpn to login."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
       header: "Login"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       className: "button-65",
@@ -5844,8 +5853,6 @@ var Poll = function Poll(props) {
       })*/
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    header: "For ".concat(navigator.userAgent, " browser")
-  }, "Hello. Sun is shining. Temperature under the dome is about 20C.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Background color is inverted to be ", window.getComputedStyle(document.body).backgroundColor, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "Expected to be about #0a1120"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
     header: "\u0422\u041C\u0422\u041F\u0417-10"
   }, "\u041F\u0440\u0438\u0432\u0435\u0442, \u041F\u0440\u0438\u043D\u0446\u0435\u0441\u0441\u0430!", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), "\u0420\u0430\u0434\u044B \u0432\u0438\u0434\u0435\u0442\u044C \u0442\u0435\u0431\u044F \u0437\u0434\u0435\u0441\u044C \u0438 \u043D\u0430\u0434\u0435\u0435\u043C\u0441\u044F, \u0447\u0442\u043E \u0442\u044B \u043F\u043E \u0434\u043E\u0441\u0442\u043E\u0438\u043D\u0441\u0442\u0432\u0443 \u043E\u0446\u0435\u043D\u0438\u0448\u044C \u0441\u0442\u0430\u0440\u0430\u043D\u0438\u044F \u043D\u0430\u0448\u0438\u0445 \u043C\u043E\u0434\u0435\u043B\u0435\u0439)"), getCards(options), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "buttonHolder"
@@ -50957,4 +50964,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.ef7f5a8a2fe9fcec428c.js.map
+//# sourceMappingURL=main.a24609ba0ba316c491f7.js.map
