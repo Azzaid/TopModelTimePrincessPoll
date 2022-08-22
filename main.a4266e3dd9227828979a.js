@@ -5995,7 +5995,7 @@ var PollFinal = function PollFinal(props) {
     className: "buttonHolder"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "button"
-  }, "\u041F\u043E\u0441\u043B\u0430\u0442\u044C")))));
+  }, "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C")))));
 };
 
 _s(PollFinal, "xXvxOehHJpw/X5Imivu/2I1+3NA=", false, function () {
@@ -51363,4 +51363,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.c75926e36d2685e5c0f6.js.map
+//# sourceMappingURL=main.a4266e3dd9227828979a.js.map
