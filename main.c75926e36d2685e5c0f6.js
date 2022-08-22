@@ -5769,10 +5769,10 @@ var Login = function Login(props) {
 
   var getLoginCard = function getLoginCard() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledLoginHolder, null, navigator.userAgent.includes("MiuiB") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      header: 'For Xiaomi browser'
-    }, "Mi browser black theme feature is highly experimental. Please turn it off to enjoy our app at full."), navigator.userAgent.includes("Safari") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      header: 'For Mi browser'
+    }, "\u0414\u043B\u044F \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0433\u043E \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0433\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u044F, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u0435\u0440\u0435\u043A\u043B\u044E\u0447\u0438\u0442\u0435\u0441\u044C \u043D\u0430 \u0441\u0432\u0435\u0442\u043B\u0443\u044E \u0442\u0435\u043C\u0443."), navigator.userAgent.includes("Safari") && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
       header: 'For Safari browser'
-    }, "Iphone \"hide my IP\" feature is incompatible with VK user data protection algorithms. Please turn it off or use vpn to login."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    }, "\u0414\u043B\u044F \u0434\u0430\u043B\u044C\u043D\u0435\u0439\u0448\u0435\u0433\u043E \u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0433\u043E \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u044F, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0441\u043A\u0440\u044B\u0442\u0438\u0435 IP \u0438\u043B\u0438 \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435 VPN, \u0442.\u043A. \u0444\u0443\u043D\u043A\u0446\u0438\u044F \u0441\u043A\u0440\u044B\u0442\u044C \u043C\u043E\u0439 IP \u043D\u0435 \u0441\u043E\u0432\u043C\u0435\u0441\u0442\u0438\u043C\u0430 \u0441 \u0430\u043B\u0433\u043E\u0440\u0438\u0442\u043C\u0430\u043C\u0438 \u0437\u0430\u0449\u0438\u0442\u044B \u043B\u0438\u0447\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445 vk"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
       header: "Login"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
       className: "button-65",
@@ -51363,4 +51363,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.7af21bdd1a6d72830460.js.map
+//# sourceMappingURL=main.c75926e36d2685e5c0f6.js.map
