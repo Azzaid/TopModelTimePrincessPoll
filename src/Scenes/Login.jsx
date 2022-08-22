@@ -15,6 +15,7 @@ const StyledLoginHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
   .button-65 {
     appearance: none;

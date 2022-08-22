@@ -29,6 +29,7 @@ export const yetAnotherPinkScheme = {
   infoCardBackgroundColor: "#eaccca", // card background
   accentBackgroundColor: "#c3909c", // card header background
   accentTextColor: "#68597a", // header text color
+  backgroundTint: "rgba(0, 0, 0, 0.1)"
 }
 
 export const globalPinkStyle = {
@@ -47,6 +48,7 @@ export const globalDarkStyle = {
   infoCardBackgroundColor: "#3f4342",
   accentBackgroundColor: "#4a4f4e",
   accentTextColor: "#f5c415",
+  backgroundTint: "rgba(255, 255, 255, 0.1)"
 };
 
 export const globalLightStyle = {

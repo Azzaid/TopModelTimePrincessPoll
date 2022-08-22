@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import {useDispatch, useSelector} from "react-redux";
 import {userFormSubmitted} from "store/actions/user";
 
-import Card from "../Components/Card";
+import Card from "Components/Card";
 
 import blackShit from "assets/images/BlackShit.png"
 import GentleRain from "assets/images/GentleRain.png"
 import WoodenFairy from "assets/images/WoodenFairy.png"
 import CyberWinner from "assets/images/CyberWinner.png"
-import {latestFormNumber} from "../constants";
+import {latestFormNumber} from "constants";
 
 const StyledAdminPanelHolder = styled.div`
   max-width: 1200px;
@@ -55,7 +55,7 @@ const StyledAdminPanelHolder = styled.div`
   }
 `
 
-const Poll = (props) => {
+const PollSemifinalle = (props) => {
     const user = useSelector(store => store.user);
     const dispatch = useDispatch();
 
@@ -157,4 +157,4 @@ const Poll = (props) => {
   )
 }
 
-export default Poll
+export default PollSemifinalle

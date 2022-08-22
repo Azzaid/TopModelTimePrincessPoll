@@ -3,11 +3,12 @@ import {Routes, Route, Navigate, useLocation, useNavigate} from "react-router-do
 import {useDispatch, useSelector} from "react-redux";
 
 import Login from "Scenes/Login";
-import AdminPanel from "Scenes/Poll";
+import PollSemifinalle from "Scenes/Polls/PollSemifinalle";
 import fetchJsonp from "fetch-jsonp";
-import {userIdKeyReceived, userLoggedIn} from "../store/actions/user";
-import SubmittedPage from "../Scenes/SubmittedPage";
-import {latestFormNumber} from "../constants";
+import {userIdKeyReceived, userLoggedIn} from "store/actions/user";
+import SubmittedPage from "Scenes/SubmittedPage";
+import {latestFormNumber} from "constants";
+import PollFinal from "Scenes/Polls/PollFinal";
 
 const RootRouter = () => {
   const user = useSelector(state => state.user);
@@ -84,7 +85,7 @@ const RootRouter = () => {
 
   return (
     <Routes>
-      <Route path={"/poll"} element={renderForLoggedInUser(<AdminPanel/>)}/>
+      <Route path={"/poll"} element={renderForLoggedInUser(<PollFinal/>)}/>
       <Route path={"/login"} element={renderForNotLoggedInUser(<Login/>)}/>
       <Route path={"/submitted"} element={renderForSubmittedUser(<SubmittedPage/>)}/>
       <Route path="*" element={getUserStartPage()}/>

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from "styled-components"
+import SingleLineSelector from "./SingleLineSelector";
+import TabledSelector from "./TabledSelector";
 
 const StyledCard = styled.div`
   background-color: ${props => props.theme.infoCardBackgroundColor};
@@ -28,6 +30,11 @@ const StyledCard = styled.div`
     justify-content: center;
     flex-direction: column;
     font-size: 20px;
+    
+    .textHolder {
+      margin-bottom: 20px;
+      width: 100%;
+    }
 
     .answerHolder {
       width: 100%;
@@ -39,24 +46,25 @@ const StyledCard = styled.div`
 `
 
 const Card = (props) => {
+
+    const getOptionsSelector = (options) => {
+        if (!options) return null
+        if (options.rows) return <TabledSelector options={options}/>
+        if (options) return <SingleLineSelector name={props.name} options={options}/>
+    };
+
   return (
     <StyledCard>
       <div className={"cardHeader"}>
         {props.header}
       </div>
       <div className={"cardBody"}>
-          {props.children}
+          <div className={"textHolder"}>
+              {props.text}
+          </div>
           {props.image && <img src={props.image}/>}
-          {props.options &&
-              <div className={"answerHolder"}>
-                  {props.options.map((option, index) => (
-                      <div>
-                          <input type="radio" id={`${props.name}_${index}`} name={props.name} value={option.value}/>
-                          <label htmlFor={`${props.name}_${index}`}>{option.name}</label>
-                      </div>
-                  ))}
-              </div>
-          }
+          {getOptionsSelector(props.options)}
+          {props.children}
       </div>
     </StyledCard>
   );

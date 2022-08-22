@@ -16,9 +16,9 @@ const SubmittedPage = (props) => {
     const getLoginCard = () => {
         return (
             <StyledSubmittedPage>
-                <Card header={"Успех!"}>
+                <Card header={"Колено!"}>
                     <div>
-                        Надеемся, нас вас нe попало ни капли... Ой, вы же без зонта!
+                        Когда-то и нас вела дорога приключений, а потом нам прострелили колено...
                     </div>
                 </Card>
             </StyledSubmittedPage>
