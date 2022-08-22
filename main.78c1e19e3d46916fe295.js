@@ -4882,7 +4882,7 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "Card__StyledCard",
   componentId: "sc-syxivx-0"
-})(["background-color:", ";margin:20px 0px;border-radius:5px;.cardHeader{width:100%;padding:10px 20px;box-sizing:border-box;background-color:", ";font-size:25px;line-height:30px;color:", ";border-top-left-radius:5px;border-top-right-radius:5px;}.cardBody{padding:10px 20px;box-sizing:border-box;color:", ";display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:20px;.textHolder{margin-bottom:20px;width:100%;}.answerHolder{width:100%;display:flex;align-items:center;justify-content:space-evenly;}}"], function (props) {
+})(["background-color:", ";margin:20px 0px;border-radius:5px;.cardHeader{width:100%;padding:10px 20px;box-sizing:border-box;background-color:", ";font-size:25px;line-height:30px;color:", ";border-top-left-radius:5px;border-top-right-radius:5px;}.cardBody{padding:10px 20px;box-sizing:border-box;color:", ";display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:20px;img{max-height:90vh;max-width:90vw;}.textHolder{margin-bottom:20px;width:100%;max-width:90vw;}.answerHolder{width:100%;display:flex;align-items:center;justify-content:space-evenly;}}"], function (props) {
   return props.theme.infoCardBackgroundColor;
 }, function (props) {
   return props.theme.accentBackgroundColor;
@@ -5860,7 +5860,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var StyledAdminPanelHolder = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
   displayName: "PollFinal__StyledAdminPanelHolder",
   componentId: "sc-noxbe6-0"
-})(["max-width:1200px;min-height:100%;img{max-height:90vh;max-width:90vw;}.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 2s alternate infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{0%{filter:hue-rotate(30deg);}50%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(-30deg);}}"]);
+})(["max-width:1200px;min-height:100%;.buttonHolder{height:70px;width:100%;display:flex;align-items:flex-start;justify-content:center;}button{width:150px;height:50px;cursor:pointer;background:#d26cba;border:none;border-radius:10px;font-family:'Damion',cursive;color:white;font-size:20px;transition:500ms;border:2px solid rgba(210,108,186,0.57);animation:hueRotation 2s alternate infinite;&:hover{box-shadow:0px 10px 25px #57aba7,0px -10px 25px #a6fffa,inset 0px -5px 10px #57aba7,inset 0px 5px 10px #a6fffa;}}@keyframes hueRotation{0%{filter:hue-rotate(30deg);}50%{filter:hue-rotate(0deg);}100%{filter:hue-rotate(-30deg);}}"]);
 _c = StyledAdminPanelHolder;
 
 var PollFinal = function PollFinal(props) {
@@ -5966,22 +5966,26 @@ var PollFinal = function PollFinal(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledAdminPanelHolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
     onSubmit: function onSubmit(event) {
       event.preventDefault();
-      /*const formData = new FormData(event.target);
-      const addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse"
-        formData.append("entry.1900145084", user.userId);
+      var formData = new FormData(event.target);
+      var addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse";
+      formData.append("entry.1900145084", user.userId);
       formData.append("entry.1708245170", user.userName);
-        fetch(addressToSubmit, {
-          method: 'POST', // *GET, POST, PUT, DELETE, etc.
-          mode: 'no-cors', // no-cors, *cors, same-origin
-          redirect: 'follow', // manual, *follow, error
-          body: formData // body data type must match "Content-Type" header
-      }).then(() => {
-          console.log("submit then")
-          dispatch(userFormSubmitted(latestFormNumber));
-      }).catch(() => {
-          console.log("submit catch")
-          dispatch(userFormSubmitted(latestFormNumber));
-      })*/
+      fetch(addressToSubmit, {
+        method: 'POST',
+        // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors',
+        // no-cors, *cors, same-origin
+        redirect: 'follow',
+        // manual, *follow, error
+        body: formData // body data type must match "Content-Type" header
+
+      }).then(function () {
+        console.log("submit then");
+        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(latestFormNumber));
+      })["catch"](function () {
+        console.log("submit catch");
+        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(latestFormNumber));
+      });
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
     header: "\u0422\u041C\u0422\u041F3-11",
@@ -51358,4 +51362,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.b13bfcc3ebaf5922516e.js.map
+//# sourceMappingURL=main.78c1e19e3d46916fe295.js.map
