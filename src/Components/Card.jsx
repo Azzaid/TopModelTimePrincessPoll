@@ -30,10 +30,16 @@ const StyledCard = styled.div`
     justify-content: center;
     flex-direction: column;
     font-size: 20px;
+
+    img {
+      max-height: 90vh;
+      max-width: 90vw;
+    }
     
     .textHolder {
       margin-bottom: 20px;
       width: 100%;
+      max-width: 90vw;
     }
 
     .answerHolder {

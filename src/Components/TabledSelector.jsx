@@ -9,6 +9,13 @@ const StyledSingleLineSelector = styled.div`
   
   table {
     border-spacing: 0px 10px;
+    width: 100%;
+    
+    .bodyRow {
+      td {
+        background-color: ${props => props.theme.backgroundTint};
+      }
+    }
     
     td {
       padding: 0px;
@@ -20,14 +27,13 @@ const StyledSingleLineSelector = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
     
     &.headerCell {
       padding-bottom: 5px;
-    }
-    
-    &.bodyCell {
-      background-color: ${props => props.theme.backgroundTint};
     }
   }
 `
@@ -49,7 +55,7 @@ const TabledSelector = (props) => {
                     )}
                 </tr>
                 {props.options.rows.map((row, rowIndex) => (
-                    <tr key={rowIndex}>
+                    <tr className={"bodyRow"} key={rowIndex}>
                         <td>
                             <div className={"tableCell bodyCell"}>
                             {row.name}

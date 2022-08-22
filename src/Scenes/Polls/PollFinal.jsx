@@ -14,11 +14,6 @@ const StyledAdminPanelHolder = styled.div`
   max-width: 1200px;
   min-height: 100%;
 
-  img {
-    max-height: 90vh;
-    max-width: 90vw;
-  }
-
   .buttonHolder {
     height: 70px;
     width: 100%;
@@ -71,10 +66,10 @@ const PollFinal = (props) => {
                 "находится бескрайнее озеро, дарующее целебную воду моему народу.",
             options:{
                 rows:[
-                    {fieldName:"entry.1432100395", name:"Общее впечатление"},
-                    {fieldName:"entry.1432100395", name:"Образ 1"},
-                    {fieldName:"entry.1432100395", name:"Образ 2"},
-                    {fieldName:"entry.1432100395", name:"Образ 3"},
+                    {fieldName:"entry.477962811", name:"Общее впечатление"},
+                    {fieldName:"entry.761992966", name:"Образ 1"},
+                    {fieldName:"entry.633283113", name:"Образ 2"},
+                    {fieldName:"entry.927616638", name:"Образ 3"},
                 ],
                 options:[
                     {name:"1", value:"1"},
@@ -97,10 +92,10 @@ const PollFinal = (props) => {
                 + "Она просто охотница на демонов, обречённая на вечное одиночество.",
             options:{
                 rows:[
-                    {fieldName:"entry.1432100395", name:"Общее впечатление"},
-                    {fieldName:"entry.1432100395", name:"Образ 1"},
-                    {fieldName:"entry.1432100395", name:"Образ 2"},
-                    {fieldName:"entry.1432100395", name:"Образ 3"},
+                    {fieldName:"entry.918577309", name:"Общее впечатление"},
+                    {fieldName:"entry.1622924486", name:"Образ 1"},
+                    {fieldName:"entry.345678725", name:"Образ 2"},
+                    {fieldName:"entry.1243935355", name:"Образ 3"},
                 ],
                 options:[
                     {name:"1", value:"1"},
@@ -137,11 +132,11 @@ const PollFinal = (props) => {
       <div>
           <form onSubmit={(event) => {
               event.preventDefault();
-              /*const formData = new FormData(event.target);
-              const addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse"
+              const formData = new FormData(event.target);
+              const addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeg3PI_t89dkcM7WbgnH2F1LUIxdlSxnOe__N-c_h3Lp41KiA/formResponse"
 
-              formData.append("entry.1900145084", user.userId);
-              formData.append("entry.1708245170", user.userName);
+              formData.append("entry.816876529", user.userId);
+              formData.append("entry.871408353", user.userName);
 
               fetch(addressToSubmit, {
                   method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -154,7 +149,7 @@ const PollFinal = (props) => {
               }).catch(() => {
                   console.log("submit catch")
                   dispatch(userFormSubmitted(latestFormNumber));
-              })*/
+              })
           }}>
               <Card header="ТМТП3-11" text={"Добро пожаловать в финал, милые леди. Наслаждайтесь!"}/>
               {getCards(options)}
