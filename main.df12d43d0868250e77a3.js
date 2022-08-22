@@ -5027,10 +5027,10 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 var StyledSingleLineSelector = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "TabledSelector__StyledSingleLineSelector",
   componentId: "sc-fpqm1d-0"
-})(["width:100%;display:flex;align-items:center;justify-content:space-evenly;table{border-spacing:0px 10px;td{padding:0px;}}.tableCell{color:", ";display:flex;align-items:center;justify-content:center;padding:20px;&.headerCell{padding-bottom:5px;}&.bodyCell{background-color:", ";}}"], function (props) {
-  return props.theme.appBaseFontColor;
-}, function (props) {
+})(["width:100%;display:flex;align-items:center;justify-content:space-evenly;table{border-spacing:0px 10px;width:100%;.bodyRow{td{background-color:", ";}}td{padding:0px;}}.tableCell{color:", ";display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:5px;box-sizing:border-box;&.headerCell{padding-bottom:5px;}}"], function (props) {
   return props.theme.backgroundTint;
+}, function (props) {
+  return props.theme.appBaseFontColor;
 });
 _c = StyledSingleLineSelector;
 
@@ -5043,6 +5043,7 @@ var TabledSelector = function TabledSelector(props) {
     }, option.name));
   })), props.options.rows.map(function (row, rowIndex) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("tr", {
+      className: "bodyRow",
       key: rowIndex
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("td", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "tableCell bodyCell"
@@ -5876,16 +5877,16 @@ var PollFinal = function PollFinal(props) {
     text: "Бездонный колодец – древний магический артефакт нашего королевства, наполненный " + "невиданными чудищами и поглощающий всю пресную воду. Много поколений могущественных " + "магов пытались уничтожить его. Но все безуспешно.Будучи сиротой, в детстве, я устремилась " + "на зов манящего голоса и упала в горное ущелье. Там я стала ученицей величайшего тёмного мага. " + "Он помог мне обнаружить уникальную способность. Оказывается, я единственный за много веков маг, " + "способный подчинить себе силу воды. Вместе с моим учителем, совершенствуясь и увеличивая год за " + "годом свою силу, мы смогли разгадать тайну Колодца и навсегда уничтожить его. На этом месте теперь " + "находится бескрайнее озеро, дарующее целебную воду моему народу.",
     options: {
       rows: [{
-        fieldName: "entry.1432100395",
+        fieldName: "entry.477962811",
         name: "Общее впечатление"
       }, {
-        fieldName: "entry.1432100395",
+        fieldName: "entry.761992966",
         name: "Образ 1"
       }, {
-        fieldName: "entry.1432100395",
+        fieldName: "entry.633283113",
         name: "Образ 2"
       }, {
-        fieldName: "entry.1432100395",
+        fieldName: "entry.927616638",
         name: "Образ 3"
       }],
       options: [{
@@ -5911,16 +5912,16 @@ var PollFinal = function PollFinal(props) {
     text: "Она была совсем юной эльфийкой, когда впервые столкнулась с Яростью Бури. Иллидан появился в их " + "деревне внезапно, как ураган, набирая рекрутов. Его внешний вид, его страсть к уничтожению демонов пугали " + "и завораживали одновременно. Её мало интересовали демоны, она пошла в охотники ради любви." + "Со временем всё поменялось. Её тело изменилось, напитавшись демонической скверной. Любимый давно погиб. " + "Теперь уже маленькая эльфийка ведома яростью, одурманена страстью к убийствам." + "Демоны снаружи. Демоны внутри. Она сама уже, наверно, больше демон, чем эльф. У неё уже давно нет имени." + "Она просто охотница на демонов, обречённая на вечное одиночество.",
     options: {
       rows: [{
-        fieldName: "entry.1432100395",
+        fieldName: "entry.918577309",
         name: "Общее впечатление"
       }, {
-        fieldName: "entry.1432100395",
+        fieldName: "entry.1622924486",
         name: "Образ 1"
       }, {
-        fieldName: "entry.1432100395",
+        fieldName: "entry.345678725",
         name: "Образ 2"
       }, {
-        fieldName: "entry.1432100395",
+        fieldName: "entry.1243935355",
         name: "Образ 3"
       }],
       options: [{
@@ -5967,9 +5968,9 @@ var PollFinal = function PollFinal(props) {
     onSubmit: function onSubmit(event) {
       event.preventDefault();
       var formData = new FormData(event.target);
-      var addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeOXJZ61GJ13OaDhdkBmhnOPtCXP3DkL2YEdSTCa7sLDBRoDQ/formResponse";
-      formData.append("entry.1900145084", user.userId);
-      formData.append("entry.1708245170", user.userName);
+      var addressToSubmit = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeg3PI_t89dkcM7WbgnH2F1LUIxdlSxnOe__N-c_h3Lp41KiA/formResponse";
+      formData.append("entry.816876529", user.userId);
+      formData.append("entry.871408353", user.userName);
       fetch(addressToSubmit, {
         method: 'POST',
         // *GET, POST, PUT, DELETE, etc.
@@ -51362,4 +51363,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.78c1e19e3d46916fe295.js.map
+//# sourceMappingURL=main.df12d43d0868250e77a3.js.map
