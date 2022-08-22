@@ -5827,8 +5827,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var store_actions_user__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! store/actions/user */ "./src/store/actions/user.js");
-/* harmony import */ var Components_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/Card */ "./src/Components/Card.jsx");
-/* harmony import */ var assets_images_BlackShit_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! assets/images/BlackShit.png */ "./src/assets/images/BlackShit.png");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../constants */ "./src/constants.js");
+/* harmony import */ var Components_Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/Card */ "./src/Components/Card.jsx");
 /* harmony import */ var assets_images_Final_SluttyMage_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! assets/images//Final/SluttyMage.png */ "./src/assets/images/Final/SluttyMage.png");
 /* harmony import */ var assets_images_Final_IlidansToy_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! assets/images//Final/IlidansToy.png */ "./src/assets/images/Final/IlidansToy.png");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
@@ -5958,7 +5958,7 @@ var PollFinal = function PollFinal(props) {
 
   var getCards = function getCards(pollOptions) {
     return shuffleArray(pollOptions).map(function (option, index) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], _extends({
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({
         key: index
       }, option));
     });
@@ -5982,13 +5982,13 @@ var PollFinal = function PollFinal(props) {
 
       }).then(function () {
         console.log("submit then");
-        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(latestFormNumber));
+        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(_constants__WEBPACK_IMPORTED_MODULE_3__.latestFormNumber));
       })["catch"](function () {
         console.log("submit catch");
-        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(latestFormNumber));
+        dispatch((0,store_actions_user__WEBPACK_IMPORTED_MODULE_2__.userFormSubmitted)(_constants__WEBPACK_IMPORTED_MODULE_3__.latestFormNumber));
       });
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
     header: "\u0422\u041C\u0422\u041F3-11",
     text: "Добро пожаловать в финал, милые леди. Наслаждайтесь!"
   }), getCards(options), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -51363,4 +51363,4 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.df12d43d0868250e77a3.js.map
+//# sourceMappingURL=main.7af21bdd1a6d72830460.js.map
